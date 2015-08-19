@@ -1,0 +1,9 @@
+
+1)
+Store the props in an array/vector besides the map?
+Or create all on heap and reference them only via pointers to their respective tiles?
+
+2)
+Reduce the Map-Tiles to structs?
+Are classes fast enough?
+Is an Array faster?
