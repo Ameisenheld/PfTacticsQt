@@ -10,11 +10,13 @@
 class Dice{
 public:
 	Dice(int, int, int);
+	Dice(int, int, int, bool);
 	int roll();
 private:
 	unsigned int n, v;
 	int b;
 	std::mt19937 random;
+	bool ignore;
 };
 
 #endif

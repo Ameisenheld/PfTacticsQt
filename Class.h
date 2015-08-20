@@ -8,8 +8,8 @@ enum ClassName{ Barbarian, Bard, Cleric, Druid, Fighter, Monk, Paladin, Ranger, 
 
 class Class{
 public:
-	Class(short* classLevel);
-	short* lvl;
+	Class(short,ClassName);
+	short lvl;
 	virtual short skillRanks();
 	virtual short rollLife();
 	virtual short babBonus();

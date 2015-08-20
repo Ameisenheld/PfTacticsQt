@@ -3,7 +3,8 @@
 
 Unit::Unit()
 	: Prop(){
-
+	ability = NULL;
+	skills = NULL;
 }
 
 Unit::Unit(Ability* ab)
@@ -15,6 +16,7 @@ Unit::Unit(Ability* ab)
 
 Unit::~Unit(){
 	//delete ability;		//TODO: is a problem cause ability might be zero??
+	//delete skills;
 }
 
 void Unit::updateStats(){
@@ -40,8 +42,8 @@ void Unit::updateStats(){
 					switch (i){
 					case unspecified: break;
 					case strBonus:
-					case konBonus:
 					case dexBonus:
+					case conBonus:
 					case intBonus:
 					case wisBonus:
 					case chaBonus:		ability->changeAbility(cur); break;

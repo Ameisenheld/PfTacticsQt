@@ -6,7 +6,7 @@ Prop::Prop()
 
 }
 
-//enum BonusEffect { unspecified, strBonus, konBonus, dexBonus, intBonus, wisBonus, chaBonus, attackBonus, skillBonus, damageBonus, speedBonus, acBonus, fortBonus, willBonus, refBonus, };
+//enum BonusEffect { unspecified, strBonus, dexBonus, conBonus, intBonus, wisBonus, chaBonus, attackBonus, skillBonus, damageBonus, speedBonus, acBonus, fortBonus, willBonus, refBonus, };
 //enum BonusType { typeless, alchemical, armor, circumstance, competence, deflection, dodge, enhancement, inherent, insight, luck, morale, naturalArmor, profane, racial, resistance, sacred, shield, size, trait };
 
 void Prop::updateStats(){		//TODO make this work without 10 years runtime ... is this good enough?
@@ -32,8 +32,8 @@ void Prop::updateStats(){		//TODO make this work without 10 years runtime ... is
 					switch (i){
 					case unspecified: break;
 					case strBonus:
-					case konBonus:
 					case dexBonus:
+					case conBonus:
 					case intBonus:
 					case wisBonus:
 					case chaBonus:

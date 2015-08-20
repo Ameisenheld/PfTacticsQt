@@ -27,6 +27,7 @@
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -70,6 +71,8 @@ public:
     QComboBox *comboBox;
     QPushButton *rollDiceButton;
     QLabel *label;
+    QLabel *label_3;
+    QLabel *pointsTotalLabel;
     QPushButton *nextButton;
     QPushButton *previousButton;
     QLabel *label_50;
@@ -93,16 +96,16 @@ public:
     QWidget *gridLayoutWidget_3;
     QVBoxLayout *verticalLayout;
     QRadioButton *radioButton_8;
-    QRadioButton *radioButton_13;
     QRadioButton *radioButton_9;
-    QRadioButton *radioButton_14;
     QRadioButton *radioButton_10;
-    QRadioButton *radioButton_15;
     QRadioButton *radioButton_11;
-    QRadioButton *radioButton_16;
     QRadioButton *radioButton_12;
-    QRadioButton *radioButton_17;
     QRadioButton *radioButton_18;
+    QRadioButton *radioButton_13;
+    QRadioButton *radioButton_14;
+    QRadioButton *radioButton_15;
+    QRadioButton *radioButton_16;
+    QRadioButton *radioButton_17;
     QWidget *page_4;
     QPushButton *nextButton_4;
     QPushButton *previousButton_4;
@@ -110,188 +113,195 @@ public:
     QWidget *gridLayoutWidget_5;
     QGridLayout *gridLayout_5;
     QHBoxLayout *horizontalLayout_11;
-    QCheckBox *checkBox_5;
-    QSpinBox *spinBox_13;
-    QLabel *label_48;
+    QCheckBox *intimidateBox;
+    QSpinBox *intimidateValue;
+    QLabel *intimidateLabel;
     QHBoxLayout *horizontalLayout_23;
-    QCheckBox *checkBox_12;
-    QSpinBox *spinBox_14;
-    QLabel *label_24;
+    QCheckBox *arcanaBox;
+    QSpinBox *arcanaValue;
+    QLabel *arcanaLabel;
     QHBoxLayout *horizontalLayout_35;
     QHBoxLayout *horizontalLayout_5;
-    QCheckBox *checkBox_39;
-    QLineEdit *lineEdit_5;
-    QSpinBox *spinBox_38;
-    QLabel *label_35;
+    QCheckBox *performBox1;
+    QLineEdit *performType1;
+    QSpinBox *performValue1;
+    QLabel *performLabel1;
     QHBoxLayout *horizontalLayout_24;
-    QCheckBox *checkBox_18;
-    QSpinBox *spinBox_15;
-    QLabel *label_25;
+    QCheckBox *dungeoneeringBox;
+    QSpinBox *dungeoneeringValue;
+    QLabel *dungeoneeringLabel;
     QHBoxLayout *horizontalLayout_37;
     QHBoxLayout *horizontalLayout_7;
-    QCheckBox *checkBox_41;
-    QLineEdit *lineEdit_7;
-    QSpinBox *spinBox_37;
-    QLabel *label_36;
+    QCheckBox *professionBox1;
+    QLineEdit *professionType1;
+    QSpinBox *professionValue1;
+    QLabel *professionLabel1;
     QHBoxLayout *horizontalLayout_20;
     QHBoxLayout *horizontalLayout_2;
-    QCheckBox *checkBox_37;
-    QLineEdit *lineEdit_2;
-    QSpinBox *spinBox_5;
-    QLabel *label_5;
+    QCheckBox *craftBox1;
+    QLineEdit *craftType1;
+    QSpinBox *craftValue1;
+    QLabel *craftLabel1;
     QHBoxLayout *horizontalLayout_22;
-    QCheckBox *checkBox_3;
-    QSpinBox *spinBox_3;
-    QLabel *label_3;
+    QCheckBox *bluffBox;
+    QSpinBox *bluffValue;
+    QLabel *bluffLabel;
     QHBoxLayout *horizontalLayout_38;
     QHBoxLayout *horizontalLayout_6;
-    QCheckBox *checkBox_40;
-    QLineEdit *lineEdit_6;
-    QSpinBox *spinBox_26;
-    QLabel *label_46;
+    QCheckBox *professionBox2;
+    QLineEdit *professionType2;
+    QSpinBox *professionValue2;
+    QLabel *professionLabel2;
     QHBoxLayout *horizontalLayout_21;
-    QCheckBox *checkBox_4;
-    QSpinBox *spinBox_4;
-    QLabel *label_4;
+    QCheckBox *climbBox;
+    QSpinBox *climbValue;
+    QLabel *climbLabel;
     QHBoxLayout *horizontalLayout_36;
     QHBoxLayout *horizontalLayout_4;
-    QCheckBox *checkBox_38;
-    QLineEdit *lineEdit_4;
-    QSpinBox *spinBox_27;
-    QLabel *label_47;
+    QCheckBox *performBox2;
+    QLineEdit *performType2;
+    QSpinBox *performValue2;
+    QLabel *performLabel2;
     QHBoxLayout *horizontalLayout_26;
-    QCheckBox *checkBox_16;
-    QSpinBox *spinBox_17;
-    QLabel *label_27;
+    QCheckBox *geographyBox;
+    QSpinBox *geographyValue;
+    QLabel *geographyLabel;
     QHBoxLayout *horizontalLayout_18;
     QHBoxLayout *horizontalLayout_3;
-    QCheckBox *checkBox_36;
-    QLineEdit *lineEdit_3;
-    QSpinBox *spinBox_36;
-    QLabel *label_45;
+    QCheckBox *craftBox3;
+    QLineEdit *craftType3;
+    QSpinBox *craftValue3;
+    QLabel *craftLabel3;
     QHBoxLayout *horizontalLayout_25;
-    QCheckBox *checkBox_15;
-    QSpinBox *spinBox_16;
-    QLabel *label_26;
+    QCheckBox *engineeringBox;
+    QSpinBox *engineeringValue;
+    QLabel *engineeringLabel;
     QHBoxLayout *horizontalLayout_27;
-    QCheckBox *checkBox_11;
-    QSpinBox *spinBox_18;
-    QLabel *label_28;
+    QCheckBox *historyBox;
+    QSpinBox *historyValue;
+    QLabel *historyLabel;
     QHBoxLayout *horizontalLayout_19;
     QHBoxLayout *horizontalLayout_47;
-    QCheckBox *checkBox_42;
-    QLineEdit *lineEdit_8;
-    QSpinBox *spinBox_35;
-    QLabel *label_44;
+    QCheckBox *craftBox2;
+    QLineEdit *craftType2;
+    QSpinBox *craftValue2;
+    QLabel *craftLabel2;
     QHBoxLayout *horizontalLayout_39;
-    QCheckBox *checkBox_27;
-    QSpinBox *spinBox_28;
-    QLabel *label_30;
+    QCheckBox *rideBox;
+    QSpinBox *rideValue;
+    QLabel *rideLabel;
     QHBoxLayout *horizontalLayout_40;
-    QCheckBox *checkBox_28;
-    QSpinBox *spinBox_29;
-    QLabel *label_37;
+    QCheckBox *senseBox;
+    QSpinBox *senseValue;
+    QLabel *senseLabel;
     QHBoxLayout *horizontalLayout_28;
-    QCheckBox *checkBox_19;
-    QSpinBox *spinBox_19;
-    QLabel *label_29;
+    QCheckBox *localBox;
+    QSpinBox *localValue;
+    QLabel *localLabel;
     QHBoxLayout *horizontalLayout_12;
-    QCheckBox *checkBox_8;
-    QSpinBox *spinBox_6;
-    QLabel *label_6;
+    QCheckBox *diplomacyBox;
+    QSpinBox *diplomacyValue;
+    QLabel *diplomacyLabel;
     QHBoxLayout *horizontalLayout_41;
-    QCheckBox *checkBox_29;
-    QSpinBox *spinBox_30;
-    QLabel *label_38;
+    QCheckBox *sleightBox;
+    QSpinBox *sleightValue;
+    QLabel *sleightLabel;
     QHBoxLayout *horizontalLayout_17;
-    QCheckBox *checkBox_7;
-    QSpinBox *spinBox_7;
-    QLabel *label_16;
+    QCheckBox *disableBox;
+    QSpinBox *disableValue;
+    QLabel *disableLabel;
     QHBoxLayout *horizontalLayout_29;
-    QCheckBox *checkBox_20;
-    QSpinBox *spinBox_20;
-    QLabel *label_31;
+    QCheckBox *natureBox;
+    QSpinBox *natureValue;
+    QLabel *natureLabel;
     QHBoxLayout *horizontalLayout_42;
-    QCheckBox *checkBox_30;
-    QSpinBox *spinBox_31;
-    QLabel *label_43;
+    QCheckBox *spellcraftBox;
+    QSpinBox *spellcraftValue;
+    QLabel *spellcraftLabel;
     QHBoxLayout *horizontalLayout_16;
-    QCheckBox *checkBox_9;
-    QSpinBox *spinBox_8;
-    QLabel *label_17;
+    QCheckBox *disguiseBox;
+    QSpinBox *disguiseValue;
+    QLabel *disguiseLabel;
     QHBoxLayout *horizontalLayout_30;
-    QCheckBox *checkBox_13;
-    QSpinBox *spinBox_21;
-    QLabel *label_32;
+    QCheckBox *nobilityBox;
+    QSpinBox *nobilityValue;
+    QLabel *nobilityLabel;
     QHBoxLayout *horizontalLayout_43;
-    QCheckBox *checkBox_31;
-    QSpinBox *spinBox_32;
-    QLabel *label_39;
+    QCheckBox *stealthBox;
+    QSpinBox *stealthValue;
+    QLabel *stealthLabel;
     QHBoxLayout *horizontalLayout_13;
-    QCheckBox *checkBox_6;
-    QSpinBox *spinBox_9;
-    QLabel *label_18;
+    QCheckBox *escapeBox;
+    QSpinBox *escapeValue;
+    QLabel *escapeLabel;
     QHBoxLayout *horizontalLayout_31;
-    QCheckBox *checkBox_21;
-    QSpinBox *spinBox_22;
-    QLabel *label_33;
+    QCheckBox *planesBox;
+    QSpinBox *planesValue;
+    QLabel *planesLabel;
     QHBoxLayout *horizontalLayout_44;
-    QCheckBox *checkBox_32;
-    QSpinBox *spinBox_33;
-    QLabel *label_40;
+    QCheckBox *survivalBox;
+    QSpinBox *survivalValue;
+    QLabel *survivalLabel;
     QHBoxLayout *horizontalLayout_15;
-    QCheckBox *checkBox_10;
-    QSpinBox *spinBox_10;
-    QLabel *label_19;
+    QCheckBox *flyBox;
+    QSpinBox *flyValue;
+    QLabel *flyLabel;
     QHBoxLayout *horizontalLayout_32;
-    QCheckBox *checkBox_22;
-    QSpinBox *spinBox_23;
-    QLabel *label_34;
+    QCheckBox *religionBox;
+    QSpinBox *religionValue;
+    QLabel *religionLabel;
     QHBoxLayout *horizontalLayout_45;
-    QCheckBox *checkBox_33;
-    QSpinBox *spinBox_34;
-    QLabel *label_41;
+    QCheckBox *swimBox;
+    QSpinBox *swimValue;
+    QLabel *swimLabel;
     QHBoxLayout *horizontalLayout_14;
-    QCheckBox *checkBox_17;
-    QSpinBox *spinBox_11;
-    QLabel *label_20;
+    QCheckBox *handleBox;
+    QSpinBox *handleValue;
+    QLabel *handleLabel;
     QHBoxLayout *horizontalLayout_33;
-    QCheckBox *checkBox_23;
-    QSpinBox *spinBox_24;
-    QLabel *label_23;
+    QCheckBox *linguisticsBox;
+    QSpinBox *linguisticsValue;
+    QLabel *linguisticsLabel;
     QHBoxLayout *horizontalLayout_46;
-    QCheckBox *checkBox_34;
-    QSpinBox *spinBox_39;
-    QLabel *label_42;
+    QCheckBox *useBox;
+    QSpinBox *useValue;
+    QLabel *useLabel;
     QHBoxLayout *horizontalLayout_8;
-    QCheckBox *checkBox_25;
-    QSpinBox *spinBox_40;
-    QLabel *label_49;
+    QCheckBox *acrobaticsBox;
+    QSpinBox *acrobaticsValue;
+    QLabel *acrobaticsLabel;
     QHBoxLayout *horizontalLayout_34;
-    QCheckBox *checkBox_24;
-    QSpinBox *spinBox_25;
-    QLabel *label_21;
+    QCheckBox *perceptionBox;
+    QSpinBox *perceptionValue;
+    QLabel *perceptionLabel;
     QHBoxLayout *horizontalLayout_9;
-    QCheckBox *checkBox_14;
-    QSpinBox *spinBox_12;
-    QLabel *label_22;
+    QCheckBox *healBox;
+    QSpinBox *healValue;
+    QLabel *healLabel;
     QHBoxLayout *horizontalLayout_10;
-    QCheckBox *checkBox_2;
-    QSpinBox *spinBox_2;
-    QLabel *label_2;
+    QCheckBox *appraiseBox;
+    QSpinBox *appraiseValue;
+    QLabel *appraiseLabel;
     QLabel *label_51;
     QLabel *label_52;
+    QLabel *label_53;
+    QCheckBox *checkBox;
+    QLabel *label_2;
+    QLabel *skillPointsAvailable;
     QWidget *page_5;
     QPushButton *nextButton_5;
     QPushButton *previousButton_5;
+    QLabel *label_16;
+    QTextBrowser *textBrowser;
     QWidget *page_6;
     QPushButton *nextButton_6;
     QPushButton *previousButton_6;
+    QLabel *label_4;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
-    QButtonGroup *raceGroup;
     QButtonGroup *classGroup;
+    QButtonGroup *raceGroup;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -478,6 +488,16 @@ public:
 
         gridLayout_2->addWidget(label, 3, 1, 1, 1);
 
+        label_3 = new QLabel(gridLayoutWidget);
+        label_3->setObjectName(QStringLiteral("label_3"));
+
+        gridLayout_2->addWidget(label_3, 6, 2, 1, 1);
+
+        pointsTotalLabel = new QLabel(gridLayoutWidget);
+        pointsTotalLabel->setObjectName(QStringLiteral("pointsTotalLabel"));
+
+        gridLayout_2->addWidget(pointsTotalLabel, 6, 3, 1, 1);
+
         nextButton = new QPushButton(page);
         nextButton->setObjectName(QStringLiteral("nextButton"));
         nextButton->setGeometry(QRect(770, 420, 80, 23));
@@ -580,23 +600,11 @@ public:
 
         verticalLayout->addWidget(radioButton_8);
 
-        radioButton_13 = new QRadioButton(gridLayoutWidget_3);
-        classGroup->addButton(radioButton_13);
-        radioButton_13->setObjectName(QStringLiteral("radioButton_13"));
-
-        verticalLayout->addWidget(radioButton_13);
-
         radioButton_9 = new QRadioButton(gridLayoutWidget_3);
         classGroup->addButton(radioButton_9);
         radioButton_9->setObjectName(QStringLiteral("radioButton_9"));
 
         verticalLayout->addWidget(radioButton_9);
-
-        radioButton_14 = new QRadioButton(gridLayoutWidget_3);
-        classGroup->addButton(radioButton_14);
-        radioButton_14->setObjectName(QStringLiteral("radioButton_14"));
-
-        verticalLayout->addWidget(radioButton_14);
 
         radioButton_10 = new QRadioButton(gridLayoutWidget_3);
         classGroup->addButton(radioButton_10);
@@ -604,23 +612,11 @@ public:
 
         verticalLayout->addWidget(radioButton_10);
 
-        radioButton_15 = new QRadioButton(gridLayoutWidget_3);
-        classGroup->addButton(radioButton_15);
-        radioButton_15->setObjectName(QStringLiteral("radioButton_15"));
-
-        verticalLayout->addWidget(radioButton_15);
-
         radioButton_11 = new QRadioButton(gridLayoutWidget_3);
         classGroup->addButton(radioButton_11);
         radioButton_11->setObjectName(QStringLiteral("radioButton_11"));
 
         verticalLayout->addWidget(radioButton_11);
-
-        radioButton_16 = new QRadioButton(gridLayoutWidget_3);
-        classGroup->addButton(radioButton_16);
-        radioButton_16->setObjectName(QStringLiteral("radioButton_16"));
-
-        verticalLayout->addWidget(radioButton_16);
 
         radioButton_12 = new QRadioButton(gridLayoutWidget_3);
         classGroup->addButton(radioButton_12);
@@ -628,17 +624,41 @@ public:
 
         verticalLayout->addWidget(radioButton_12);
 
-        radioButton_17 = new QRadioButton(gridLayoutWidget_3);
-        classGroup->addButton(radioButton_17);
-        radioButton_17->setObjectName(QStringLiteral("radioButton_17"));
-
-        verticalLayout->addWidget(radioButton_17);
-
         radioButton_18 = new QRadioButton(gridLayoutWidget_3);
         classGroup->addButton(radioButton_18);
         radioButton_18->setObjectName(QStringLiteral("radioButton_18"));
 
         verticalLayout->addWidget(radioButton_18);
+
+        radioButton_13 = new QRadioButton(gridLayoutWidget_3);
+        classGroup->addButton(radioButton_13);
+        radioButton_13->setObjectName(QStringLiteral("radioButton_13"));
+
+        verticalLayout->addWidget(radioButton_13);
+
+        radioButton_14 = new QRadioButton(gridLayoutWidget_3);
+        classGroup->addButton(radioButton_14);
+        radioButton_14->setObjectName(QStringLiteral("radioButton_14"));
+
+        verticalLayout->addWidget(radioButton_14);
+
+        radioButton_15 = new QRadioButton(gridLayoutWidget_3);
+        classGroup->addButton(radioButton_15);
+        radioButton_15->setObjectName(QStringLiteral("radioButton_15"));
+
+        verticalLayout->addWidget(radioButton_15);
+
+        radioButton_16 = new QRadioButton(gridLayoutWidget_3);
+        classGroup->addButton(radioButton_16);
+        radioButton_16->setObjectName(QStringLiteral("radioButton_16"));
+
+        verticalLayout->addWidget(radioButton_16);
+
+        radioButton_17 = new QRadioButton(gridLayoutWidget_3);
+        classGroup->addButton(radioButton_17);
+        radioButton_17->setObjectName(QStringLiteral("radioButton_17"));
+
+        verticalLayout->addWidget(radioButton_17);
 
         creationStack->addWidget(page_3);
         page_4 = new QWidget();
@@ -651,7 +671,7 @@ public:
         previousButton_4->setGeometry(QRect(670, 420, 80, 23));
         label_15 = new QLabel(page_4);
         label_15->setObjectName(QStringLiteral("label_15"));
-        label_15->setGeometry(QRect(20, 20, 91, 21));
+        label_15->setGeometry(QRect(20, 20, 91, 16));
         gridLayoutWidget_5 = new QWidget(page_4);
         gridLayoutWidget_5->setObjectName(QStringLiteral("gridLayoutWidget_5"));
         gridLayoutWidget_5->setGeometry(QRect(100, 20, 768, 381));
@@ -665,24 +685,64 @@ public:
         horizontalLayout_11 = new QHBoxLayout();
         horizontalLayout_11->setSpacing(6);
         horizontalLayout_11->setObjectName(QStringLiteral("horizontalLayout_11"));
-        checkBox_5 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_5->setObjectName(QStringLiteral("checkBox_5"));
+        intimidateBox = new QCheckBox(gridLayoutWidget_5);
+        intimidateBox->setObjectName(QStringLiteral("intimidateBox"));
+        intimidateBox->setEnabled(false);
+        QPalette palette;
+        QBrush brush(QColor(0, 0, 0, 255));
+        brush.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        QBrush brush1(QColor(240, 240, 240, 255));
+        brush1.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette.setBrush(QPalette::Active, QPalette::Dark, brush);
+        QBrush brush2(QColor(199, 200, 200, 255));
+        brush2.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        QBrush brush3(QColor(255, 255, 255, 255));
+        brush3.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette.setBrush(QPalette::Active, QPalette::Window, brush1);
+        QBrush brush4(QColor(105, 105, 105, 255));
+        brush4.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        intimidateBox->setPalette(palette);
 
-        horizontalLayout_11->addWidget(checkBox_5);
+        horizontalLayout_11->addWidget(intimidateBox);
 
-        spinBox_13 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_13->setObjectName(QStringLiteral("spinBox_13"));
-        spinBox_13->setMinimumSize(QSize(37, 20));
-        spinBox_13->setMaximumSize(QSize(37, 20));
+        intimidateValue = new QSpinBox(gridLayoutWidget_5);
+        intimidateValue->setObjectName(QStringLiteral("intimidateValue"));
+        intimidateValue->setMinimumSize(QSize(37, 20));
+        intimidateValue->setMaximumSize(QSize(37, 20));
 
-        horizontalLayout_11->addWidget(spinBox_13);
+        horizontalLayout_11->addWidget(intimidateValue);
 
-        label_48 = new QLabel(gridLayoutWidget_5);
-        label_48->setObjectName(QStringLiteral("label_48"));
-        label_48->setMinimumSize(QSize(30, 0));
-        label_48->setMaximumSize(QSize(30, 16777215));
+        intimidateLabel = new QLabel(gridLayoutWidget_5);
+        intimidateLabel->setObjectName(QStringLiteral("intimidateLabel"));
+        intimidateLabel->setMinimumSize(QSize(30, 0));
+        intimidateLabel->setMaximumSize(QSize(30, 16777215));
 
-        horizontalLayout_11->addWidget(label_48);
+        horizontalLayout_11->addWidget(intimidateLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_11, 1, 2, 1, 1);
@@ -690,24 +750,54 @@ public:
         horizontalLayout_23 = new QHBoxLayout();
         horizontalLayout_23->setSpacing(6);
         horizontalLayout_23->setObjectName(QStringLiteral("horizontalLayout_23"));
-        checkBox_12 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_12->setObjectName(QStringLiteral("checkBox_12"));
+        arcanaBox = new QCheckBox(gridLayoutWidget_5);
+        arcanaBox->setObjectName(QStringLiteral("arcanaBox"));
+        arcanaBox->setEnabled(false);
+        QPalette palette1;
+        palette1.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette1.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette1.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette1.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette1.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette1.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette1.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette1.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette1.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette1.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette1.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette1.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette1.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette1.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette1.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette1.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette1.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette1.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette1.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette1.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette1.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette1.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette1.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette1.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette1.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette1.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette1.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        arcanaBox->setPalette(palette1);
 
-        horizontalLayout_23->addWidget(checkBox_12);
+        horizontalLayout_23->addWidget(arcanaBox);
 
-        spinBox_14 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_14->setObjectName(QStringLiteral("spinBox_14"));
-        spinBox_14->setMinimumSize(QSize(37, 20));
-        spinBox_14->setMaximumSize(QSize(37, 20));
+        arcanaValue = new QSpinBox(gridLayoutWidget_5);
+        arcanaValue->setObjectName(QStringLiteral("arcanaValue"));
+        arcanaValue->setMinimumSize(QSize(37, 20));
+        arcanaValue->setMaximumSize(QSize(37, 20));
 
-        horizontalLayout_23->addWidget(spinBox_14);
+        horizontalLayout_23->addWidget(arcanaValue);
 
-        label_24 = new QLabel(gridLayoutWidget_5);
-        label_24->setObjectName(QStringLiteral("label_24"));
-        label_24->setMinimumSize(QSize(30, 0));
-        label_24->setMaximumSize(QSize(30, 16777215));
+        arcanaLabel = new QLabel(gridLayoutWidget_5);
+        arcanaLabel->setObjectName(QStringLiteral("arcanaLabel"));
+        arcanaLabel->setMinimumSize(QSize(30, 0));
+        arcanaLabel->setMaximumSize(QSize(30, 16777215));
 
-        horizontalLayout_23->addWidget(label_24);
+        horizontalLayout_23->addWidget(arcanaLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_23, 2, 2, 1, 1);
@@ -718,34 +808,49 @@ public:
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setSpacing(1);
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
-        checkBox_39 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_39->setObjectName(QStringLiteral("checkBox_39"));
+        performBox1 = new QCheckBox(gridLayoutWidget_5);
+        performBox1->setObjectName(QStringLiteral("performBox1"));
+        performBox1->setEnabled(false);
+        QPalette palette2;
+        palette2.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette2.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette2.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette2.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette2.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette2.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette2.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette2.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette2.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette2.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette2.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette2.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        performBox1->setPalette(palette2);
 
-        horizontalLayout_5->addWidget(checkBox_39);
+        horizontalLayout_5->addWidget(performBox1);
 
-        lineEdit_5 = new QLineEdit(gridLayoutWidget_5);
-        lineEdit_5->setObjectName(QStringLiteral("lineEdit_5"));
-        lineEdit_5->setMinimumSize(QSize(80, 23));
-        lineEdit_5->setMaximumSize(QSize(80, 23));
+        performType1 = new QLineEdit(gridLayoutWidget_5);
+        performType1->setObjectName(QStringLiteral("performType1"));
+        performType1->setMinimumSize(QSize(80, 23));
+        performType1->setMaximumSize(QSize(80, 23));
 
-        horizontalLayout_5->addWidget(lineEdit_5);
+        horizontalLayout_5->addWidget(performType1);
 
 
         horizontalLayout_35->addLayout(horizontalLayout_5);
 
-        spinBox_38 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_38->setObjectName(QStringLiteral("spinBox_38"));
-        spinBox_38->setMinimumSize(QSize(37, 20));
-        spinBox_38->setMaximumSize(QSize(37, 23));
+        performValue1 = new QSpinBox(gridLayoutWidget_5);
+        performValue1->setObjectName(QStringLiteral("performValue1"));
+        performValue1->setMinimumSize(QSize(37, 20));
+        performValue1->setMaximumSize(QSize(37, 23));
 
-        horizontalLayout_35->addWidget(spinBox_38);
+        horizontalLayout_35->addWidget(performValue1);
 
-        label_35 = new QLabel(gridLayoutWidget_5);
-        label_35->setObjectName(QStringLiteral("label_35"));
-        label_35->setMinimumSize(QSize(30, 20));
-        label_35->setMaximumSize(QSize(30, 23));
+        performLabel1 = new QLabel(gridLayoutWidget_5);
+        performLabel1->setObjectName(QStringLiteral("performLabel1"));
+        performLabel1->setMinimumSize(QSize(30, 20));
+        performLabel1->setMaximumSize(QSize(30, 23));
 
-        horizontalLayout_35->addWidget(label_35);
+        horizontalLayout_35->addWidget(performLabel1);
 
 
         gridLayout_5->addLayout(horizontalLayout_35, 1, 4, 1, 1);
@@ -753,24 +858,54 @@ public:
         horizontalLayout_24 = new QHBoxLayout();
         horizontalLayout_24->setSpacing(6);
         horizontalLayout_24->setObjectName(QStringLiteral("horizontalLayout_24"));
-        checkBox_18 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_18->setObjectName(QStringLiteral("checkBox_18"));
+        dungeoneeringBox = new QCheckBox(gridLayoutWidget_5);
+        dungeoneeringBox->setObjectName(QStringLiteral("dungeoneeringBox"));
+        dungeoneeringBox->setEnabled(false);
+        QPalette palette3;
+        palette3.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette3.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette3.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette3.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette3.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette3.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette3.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette3.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette3.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette3.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette3.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette3.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette3.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette3.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette3.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette3.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette3.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette3.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette3.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette3.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette3.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette3.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette3.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette3.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette3.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette3.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette3.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        dungeoneeringBox->setPalette(palette3);
 
-        horizontalLayout_24->addWidget(checkBox_18);
+        horizontalLayout_24->addWidget(dungeoneeringBox);
 
-        spinBox_15 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_15->setObjectName(QStringLiteral("spinBox_15"));
-        spinBox_15->setMinimumSize(QSize(37, 20));
-        spinBox_15->setMaximumSize(QSize(37, 20));
+        dungeoneeringValue = new QSpinBox(gridLayoutWidget_5);
+        dungeoneeringValue->setObjectName(QStringLiteral("dungeoneeringValue"));
+        dungeoneeringValue->setMinimumSize(QSize(37, 20));
+        dungeoneeringValue->setMaximumSize(QSize(37, 20));
 
-        horizontalLayout_24->addWidget(spinBox_15);
+        horizontalLayout_24->addWidget(dungeoneeringValue);
 
-        label_25 = new QLabel(gridLayoutWidget_5);
-        label_25->setObjectName(QStringLiteral("label_25"));
-        label_25->setMinimumSize(QSize(30, 0));
-        label_25->setMaximumSize(QSize(30, 16777215));
+        dungeoneeringLabel = new QLabel(gridLayoutWidget_5);
+        dungeoneeringLabel->setObjectName(QStringLiteral("dungeoneeringLabel"));
+        dungeoneeringLabel->setMinimumSize(QSize(30, 0));
+        dungeoneeringLabel->setMaximumSize(QSize(30, 16777215));
 
-        horizontalLayout_24->addWidget(label_25);
+        horizontalLayout_24->addWidget(dungeoneeringLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_24, 3, 2, 1, 1);
@@ -781,34 +916,49 @@ public:
         horizontalLayout_7 = new QHBoxLayout();
         horizontalLayout_7->setSpacing(1);
         horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
-        checkBox_41 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_41->setObjectName(QStringLiteral("checkBox_41"));
+        professionBox1 = new QCheckBox(gridLayoutWidget_5);
+        professionBox1->setObjectName(QStringLiteral("professionBox1"));
+        professionBox1->setEnabled(false);
+        QPalette palette4;
+        palette4.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette4.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette4.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette4.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette4.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette4.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette4.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette4.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette4.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette4.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette4.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette4.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        professionBox1->setPalette(palette4);
 
-        horizontalLayout_7->addWidget(checkBox_41);
+        horizontalLayout_7->addWidget(professionBox1);
 
-        lineEdit_7 = new QLineEdit(gridLayoutWidget_5);
-        lineEdit_7->setObjectName(QStringLiteral("lineEdit_7"));
-        lineEdit_7->setMinimumSize(QSize(80, 23));
-        lineEdit_7->setMaximumSize(QSize(80, 23));
+        professionType1 = new QLineEdit(gridLayoutWidget_5);
+        professionType1->setObjectName(QStringLiteral("professionType1"));
+        professionType1->setMinimumSize(QSize(80, 23));
+        professionType1->setMaximumSize(QSize(80, 23));
 
-        horizontalLayout_7->addWidget(lineEdit_7);
+        horizontalLayout_7->addWidget(professionType1);
 
 
         horizontalLayout_37->addLayout(horizontalLayout_7);
 
-        spinBox_37 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_37->setObjectName(QStringLiteral("spinBox_37"));
-        spinBox_37->setMinimumSize(QSize(37, 20));
-        spinBox_37->setMaximumSize(QSize(37, 23));
+        professionValue1 = new QSpinBox(gridLayoutWidget_5);
+        professionValue1->setObjectName(QStringLiteral("professionValue1"));
+        professionValue1->setMinimumSize(QSize(37, 20));
+        professionValue1->setMaximumSize(QSize(37, 23));
 
-        horizontalLayout_37->addWidget(spinBox_37);
+        horizontalLayout_37->addWidget(professionValue1);
 
-        label_36 = new QLabel(gridLayoutWidget_5);
-        label_36->setObjectName(QStringLiteral("label_36"));
-        label_36->setMinimumSize(QSize(30, 20));
-        label_36->setMaximumSize(QSize(30, 23));
+        professionLabel1 = new QLabel(gridLayoutWidget_5);
+        professionLabel1->setObjectName(QStringLiteral("professionLabel1"));
+        professionLabel1->setMinimumSize(QSize(30, 20));
+        professionLabel1->setMaximumSize(QSize(30, 23));
 
-        horizontalLayout_37->addWidget(label_36);
+        horizontalLayout_37->addWidget(professionLabel1);
 
 
         gridLayout_5->addLayout(horizontalLayout_37, 3, 4, 1, 1);
@@ -819,34 +969,64 @@ public:
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setSpacing(1);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
-        checkBox_37 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_37->setObjectName(QStringLiteral("checkBox_37"));
+        craftBox1 = new QCheckBox(gridLayoutWidget_5);
+        craftBox1->setObjectName(QStringLiteral("craftBox1"));
+        craftBox1->setEnabled(false);
+        QPalette palette5;
+        palette5.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette5.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette5.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette5.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette5.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette5.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette5.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette5.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette5.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette5.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette5.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette5.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette5.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette5.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette5.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette5.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette5.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette5.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette5.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette5.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette5.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette5.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette5.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette5.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette5.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette5.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette5.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        craftBox1->setPalette(palette5);
 
-        horizontalLayout_2->addWidget(checkBox_37);
+        horizontalLayout_2->addWidget(craftBox1);
 
-        lineEdit_2 = new QLineEdit(gridLayoutWidget_5);
-        lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
-        lineEdit_2->setMinimumSize(QSize(80, 23));
-        lineEdit_2->setMaximumSize(QSize(80, 23));
+        craftType1 = new QLineEdit(gridLayoutWidget_5);
+        craftType1->setObjectName(QStringLiteral("craftType1"));
+        craftType1->setMinimumSize(QSize(80, 23));
+        craftType1->setMaximumSize(QSize(80, 23));
 
-        horizontalLayout_2->addWidget(lineEdit_2);
+        horizontalLayout_2->addWidget(craftType1);
 
 
         horizontalLayout_20->addLayout(horizontalLayout_2);
 
-        spinBox_5 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_5->setObjectName(QStringLiteral("spinBox_5"));
-        spinBox_5->setMinimumSize(QSize(37, 20));
-        spinBox_5->setMaximumSize(QSize(37, 20));
+        craftValue1 = new QSpinBox(gridLayoutWidget_5);
+        craftValue1->setObjectName(QStringLiteral("craftValue1"));
+        craftValue1->setMinimumSize(QSize(37, 20));
+        craftValue1->setMaximumSize(QSize(37, 20));
 
-        horizontalLayout_20->addWidget(spinBox_5);
+        horizontalLayout_20->addWidget(craftValue1);
 
-        label_5 = new QLabel(gridLayoutWidget_5);
-        label_5->setObjectName(QStringLiteral("label_5"));
-        label_5->setMinimumSize(QSize(30, 20));
-        label_5->setMaximumSize(QSize(30, 20));
+        craftLabel1 = new QLabel(gridLayoutWidget_5);
+        craftLabel1->setObjectName(QStringLiteral("craftLabel1"));
+        craftLabel1->setMinimumSize(QSize(30, 20));
+        craftLabel1->setMaximumSize(QSize(30, 20));
 
-        horizontalLayout_20->addWidget(label_5);
+        horizontalLayout_20->addWidget(craftLabel1);
 
 
         gridLayout_5->addLayout(horizontalLayout_20, 4, 0, 1, 1);
@@ -854,24 +1034,54 @@ public:
         horizontalLayout_22 = new QHBoxLayout();
         horizontalLayout_22->setSpacing(6);
         horizontalLayout_22->setObjectName(QStringLiteral("horizontalLayout_22"));
-        checkBox_3 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_3->setObjectName(QStringLiteral("checkBox_3"));
+        bluffBox = new QCheckBox(gridLayoutWidget_5);
+        bluffBox->setObjectName(QStringLiteral("bluffBox"));
+        bluffBox->setEnabled(false);
+        QPalette palette6;
+        palette6.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette6.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette6.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette6.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette6.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette6.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette6.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette6.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette6.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette6.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette6.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette6.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette6.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette6.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette6.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette6.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette6.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette6.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette6.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette6.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette6.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette6.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette6.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette6.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette6.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette6.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette6.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        bluffBox->setPalette(palette6);
 
-        horizontalLayout_22->addWidget(checkBox_3);
+        horizontalLayout_22->addWidget(bluffBox);
 
-        spinBox_3 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_3->setObjectName(QStringLiteral("spinBox_3"));
-        spinBox_3->setMinimumSize(QSize(37, 20));
-        spinBox_3->setMaximumSize(QSize(37, 20));
+        bluffValue = new QSpinBox(gridLayoutWidget_5);
+        bluffValue->setObjectName(QStringLiteral("bluffValue"));
+        bluffValue->setMinimumSize(QSize(37, 20));
+        bluffValue->setMaximumSize(QSize(37, 20));
 
-        horizontalLayout_22->addWidget(spinBox_3);
+        horizontalLayout_22->addWidget(bluffValue);
 
-        label_3 = new QLabel(gridLayoutWidget_5);
-        label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setMinimumSize(QSize(30, 20));
-        label_3->setMaximumSize(QSize(30, 16777215));
+        bluffLabel = new QLabel(gridLayoutWidget_5);
+        bluffLabel->setObjectName(QStringLiteral("bluffLabel"));
+        bluffLabel->setMinimumSize(QSize(30, 20));
+        bluffLabel->setMaximumSize(QSize(30, 16777215));
 
-        horizontalLayout_22->addWidget(label_3);
+        horizontalLayout_22->addWidget(bluffLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_22, 2, 0, 1, 1);
@@ -882,34 +1092,49 @@ public:
         horizontalLayout_6 = new QHBoxLayout();
         horizontalLayout_6->setSpacing(1);
         horizontalLayout_6->setObjectName(QStringLiteral("horizontalLayout_6"));
-        checkBox_40 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_40->setObjectName(QStringLiteral("checkBox_40"));
+        professionBox2 = new QCheckBox(gridLayoutWidget_5);
+        professionBox2->setObjectName(QStringLiteral("professionBox2"));
+        professionBox2->setEnabled(false);
+        QPalette palette7;
+        palette7.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette7.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette7.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette7.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette7.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette7.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette7.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette7.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette7.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette7.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette7.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette7.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        professionBox2->setPalette(palette7);
 
-        horizontalLayout_6->addWidget(checkBox_40);
+        horizontalLayout_6->addWidget(professionBox2);
 
-        lineEdit_6 = new QLineEdit(gridLayoutWidget_5);
-        lineEdit_6->setObjectName(QStringLiteral("lineEdit_6"));
-        lineEdit_6->setMinimumSize(QSize(80, 23));
-        lineEdit_6->setMaximumSize(QSize(80, 23));
+        professionType2 = new QLineEdit(gridLayoutWidget_5);
+        professionType2->setObjectName(QStringLiteral("professionType2"));
+        professionType2->setMinimumSize(QSize(80, 23));
+        professionType2->setMaximumSize(QSize(80, 23));
 
-        horizontalLayout_6->addWidget(lineEdit_6);
+        horizontalLayout_6->addWidget(professionType2);
 
 
         horizontalLayout_38->addLayout(horizontalLayout_6);
 
-        spinBox_26 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_26->setObjectName(QStringLiteral("spinBox_26"));
-        spinBox_26->setMinimumSize(QSize(37, 20));
-        spinBox_26->setMaximumSize(QSize(37, 23));
+        professionValue2 = new QSpinBox(gridLayoutWidget_5);
+        professionValue2->setObjectName(QStringLiteral("professionValue2"));
+        professionValue2->setMinimumSize(QSize(37, 20));
+        professionValue2->setMaximumSize(QSize(37, 23));
 
-        horizontalLayout_38->addWidget(spinBox_26);
+        horizontalLayout_38->addWidget(professionValue2);
 
-        label_46 = new QLabel(gridLayoutWidget_5);
-        label_46->setObjectName(QStringLiteral("label_46"));
-        label_46->setMinimumSize(QSize(30, 20));
-        label_46->setMaximumSize(QSize(30, 23));
+        professionLabel2 = new QLabel(gridLayoutWidget_5);
+        professionLabel2->setObjectName(QStringLiteral("professionLabel2"));
+        professionLabel2->setMinimumSize(QSize(30, 20));
+        professionLabel2->setMaximumSize(QSize(30, 23));
 
-        horizontalLayout_38->addWidget(label_46);
+        horizontalLayout_38->addWidget(professionLabel2);
 
 
         gridLayout_5->addLayout(horizontalLayout_38, 4, 4, 1, 1);
@@ -917,24 +1142,54 @@ public:
         horizontalLayout_21 = new QHBoxLayout();
         horizontalLayout_21->setSpacing(6);
         horizontalLayout_21->setObjectName(QStringLiteral("horizontalLayout_21"));
-        checkBox_4 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_4->setObjectName(QStringLiteral("checkBox_4"));
+        climbBox = new QCheckBox(gridLayoutWidget_5);
+        climbBox->setObjectName(QStringLiteral("climbBox"));
+        climbBox->setEnabled(false);
+        QPalette palette8;
+        palette8.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette8.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette8.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette8.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette8.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette8.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette8.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette8.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette8.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette8.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette8.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette8.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette8.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette8.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette8.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette8.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette8.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette8.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette8.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette8.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette8.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette8.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette8.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette8.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette8.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette8.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette8.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        climbBox->setPalette(palette8);
 
-        horizontalLayout_21->addWidget(checkBox_4);
+        horizontalLayout_21->addWidget(climbBox);
 
-        spinBox_4 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_4->setObjectName(QStringLiteral("spinBox_4"));
-        spinBox_4->setMinimumSize(QSize(37, 20));
-        spinBox_4->setMaximumSize(QSize(37, 20));
+        climbValue = new QSpinBox(gridLayoutWidget_5);
+        climbValue->setObjectName(QStringLiteral("climbValue"));
+        climbValue->setMinimumSize(QSize(37, 20));
+        climbValue->setMaximumSize(QSize(37, 20));
 
-        horizontalLayout_21->addWidget(spinBox_4);
+        horizontalLayout_21->addWidget(climbValue);
 
-        label_4 = new QLabel(gridLayoutWidget_5);
-        label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setMinimumSize(QSize(30, 20));
-        label_4->setMaximumSize(QSize(30, 20));
+        climbLabel = new QLabel(gridLayoutWidget_5);
+        climbLabel->setObjectName(QStringLiteral("climbLabel"));
+        climbLabel->setMinimumSize(QSize(30, 20));
+        climbLabel->setMaximumSize(QSize(30, 20));
 
-        horizontalLayout_21->addWidget(label_4);
+        horizontalLayout_21->addWidget(climbLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_21, 3, 0, 1, 1);
@@ -945,34 +1200,49 @@ public:
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setSpacing(1);
         horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
-        checkBox_38 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_38->setObjectName(QStringLiteral("checkBox_38"));
+        performBox2 = new QCheckBox(gridLayoutWidget_5);
+        performBox2->setObjectName(QStringLiteral("performBox2"));
+        performBox2->setEnabled(false);
+        QPalette palette9;
+        palette9.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette9.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette9.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette9.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette9.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette9.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette9.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette9.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette9.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette9.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette9.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette9.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        performBox2->setPalette(palette9);
 
-        horizontalLayout_4->addWidget(checkBox_38);
+        horizontalLayout_4->addWidget(performBox2);
 
-        lineEdit_4 = new QLineEdit(gridLayoutWidget_5);
-        lineEdit_4->setObjectName(QStringLiteral("lineEdit_4"));
-        lineEdit_4->setMinimumSize(QSize(80, 23));
-        lineEdit_4->setMaximumSize(QSize(80, 23));
+        performType2 = new QLineEdit(gridLayoutWidget_5);
+        performType2->setObjectName(QStringLiteral("performType2"));
+        performType2->setMinimumSize(QSize(80, 23));
+        performType2->setMaximumSize(QSize(80, 23));
 
-        horizontalLayout_4->addWidget(lineEdit_4);
+        horizontalLayout_4->addWidget(performType2);
 
 
         horizontalLayout_36->addLayout(horizontalLayout_4);
 
-        spinBox_27 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_27->setObjectName(QStringLiteral("spinBox_27"));
-        spinBox_27->setMinimumSize(QSize(37, 20));
-        spinBox_27->setMaximumSize(QSize(37, 23));
+        performValue2 = new QSpinBox(gridLayoutWidget_5);
+        performValue2->setObjectName(QStringLiteral("performValue2"));
+        performValue2->setMinimumSize(QSize(37, 20));
+        performValue2->setMaximumSize(QSize(37, 23));
 
-        horizontalLayout_36->addWidget(spinBox_27);
+        horizontalLayout_36->addWidget(performValue2);
 
-        label_47 = new QLabel(gridLayoutWidget_5);
-        label_47->setObjectName(QStringLiteral("label_47"));
-        label_47->setMinimumSize(QSize(30, 20));
-        label_47->setMaximumSize(QSize(30, 23));
+        performLabel2 = new QLabel(gridLayoutWidget_5);
+        performLabel2->setObjectName(QStringLiteral("performLabel2"));
+        performLabel2->setMinimumSize(QSize(30, 20));
+        performLabel2->setMaximumSize(QSize(30, 23));
 
-        horizontalLayout_36->addWidget(label_47);
+        horizontalLayout_36->addWidget(performLabel2);
 
 
         gridLayout_5->addLayout(horizontalLayout_36, 2, 4, 1, 1);
@@ -980,24 +1250,54 @@ public:
         horizontalLayout_26 = new QHBoxLayout();
         horizontalLayout_26->setSpacing(6);
         horizontalLayout_26->setObjectName(QStringLiteral("horizontalLayout_26"));
-        checkBox_16 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_16->setObjectName(QStringLiteral("checkBox_16"));
+        geographyBox = new QCheckBox(gridLayoutWidget_5);
+        geographyBox->setObjectName(QStringLiteral("geographyBox"));
+        geographyBox->setEnabled(false);
+        QPalette palette10;
+        palette10.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette10.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette10.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette10.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette10.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette10.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette10.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette10.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette10.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette10.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette10.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette10.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette10.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette10.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette10.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette10.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette10.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette10.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette10.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette10.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette10.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette10.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette10.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette10.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette10.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette10.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette10.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        geographyBox->setPalette(palette10);
 
-        horizontalLayout_26->addWidget(checkBox_16);
+        horizontalLayout_26->addWidget(geographyBox);
 
-        spinBox_17 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_17->setObjectName(QStringLiteral("spinBox_17"));
-        spinBox_17->setMinimumSize(QSize(37, 20));
-        spinBox_17->setMaximumSize(QSize(37, 20));
+        geographyValue = new QSpinBox(gridLayoutWidget_5);
+        geographyValue->setObjectName(QStringLiteral("geographyValue"));
+        geographyValue->setMinimumSize(QSize(37, 20));
+        geographyValue->setMaximumSize(QSize(37, 20));
 
-        horizontalLayout_26->addWidget(spinBox_17);
+        horizontalLayout_26->addWidget(geographyValue);
 
-        label_27 = new QLabel(gridLayoutWidget_5);
-        label_27->setObjectName(QStringLiteral("label_27"));
-        label_27->setMinimumSize(QSize(30, 0));
-        label_27->setMaximumSize(QSize(30, 16777215));
+        geographyLabel = new QLabel(gridLayoutWidget_5);
+        geographyLabel->setObjectName(QStringLiteral("geographyLabel"));
+        geographyLabel->setMinimumSize(QSize(30, 0));
+        geographyLabel->setMaximumSize(QSize(30, 16777215));
 
-        horizontalLayout_26->addWidget(label_27);
+        horizontalLayout_26->addWidget(geographyLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_26, 5, 2, 1, 1);
@@ -1008,34 +1308,64 @@ public:
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setSpacing(1);
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
-        checkBox_36 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_36->setObjectName(QStringLiteral("checkBox_36"));
+        craftBox3 = new QCheckBox(gridLayoutWidget_5);
+        craftBox3->setObjectName(QStringLiteral("craftBox3"));
+        craftBox3->setEnabled(false);
+        QPalette palette11;
+        palette11.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette11.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette11.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette11.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette11.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette11.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette11.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette11.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette11.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette11.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette11.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette11.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette11.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette11.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette11.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette11.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette11.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette11.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette11.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette11.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette11.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette11.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette11.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette11.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette11.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette11.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette11.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        craftBox3->setPalette(palette11);
 
-        horizontalLayout_3->addWidget(checkBox_36);
+        horizontalLayout_3->addWidget(craftBox3);
 
-        lineEdit_3 = new QLineEdit(gridLayoutWidget_5);
-        lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
-        lineEdit_3->setMinimumSize(QSize(80, 23));
-        lineEdit_3->setMaximumSize(QSize(80, 23));
+        craftType3 = new QLineEdit(gridLayoutWidget_5);
+        craftType3->setObjectName(QStringLiteral("craftType3"));
+        craftType3->setMinimumSize(QSize(80, 23));
+        craftType3->setMaximumSize(QSize(80, 23));
 
-        horizontalLayout_3->addWidget(lineEdit_3);
+        horizontalLayout_3->addWidget(craftType3);
 
 
         horizontalLayout_18->addLayout(horizontalLayout_3);
 
-        spinBox_36 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_36->setObjectName(QStringLiteral("spinBox_36"));
-        spinBox_36->setMinimumSize(QSize(37, 20));
-        spinBox_36->setMaximumSize(QSize(37, 20));
+        craftValue3 = new QSpinBox(gridLayoutWidget_5);
+        craftValue3->setObjectName(QStringLiteral("craftValue3"));
+        craftValue3->setMinimumSize(QSize(37, 20));
+        craftValue3->setMaximumSize(QSize(37, 20));
 
-        horizontalLayout_18->addWidget(spinBox_36);
+        horizontalLayout_18->addWidget(craftValue3);
 
-        label_45 = new QLabel(gridLayoutWidget_5);
-        label_45->setObjectName(QStringLiteral("label_45"));
-        label_45->setMinimumSize(QSize(30, 20));
-        label_45->setMaximumSize(QSize(30, 20));
+        craftLabel3 = new QLabel(gridLayoutWidget_5);
+        craftLabel3->setObjectName(QStringLiteral("craftLabel3"));
+        craftLabel3->setMinimumSize(QSize(30, 20));
+        craftLabel3->setMaximumSize(QSize(30, 20));
 
-        horizontalLayout_18->addWidget(label_45);
+        horizontalLayout_18->addWidget(craftLabel3);
 
 
         gridLayout_5->addLayout(horizontalLayout_18, 6, 0, 1, 1);
@@ -1043,24 +1373,54 @@ public:
         horizontalLayout_25 = new QHBoxLayout();
         horizontalLayout_25->setSpacing(6);
         horizontalLayout_25->setObjectName(QStringLiteral("horizontalLayout_25"));
-        checkBox_15 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_15->setObjectName(QStringLiteral("checkBox_15"));
+        engineeringBox = new QCheckBox(gridLayoutWidget_5);
+        engineeringBox->setObjectName(QStringLiteral("engineeringBox"));
+        engineeringBox->setEnabled(false);
+        QPalette palette12;
+        palette12.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette12.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette12.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette12.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette12.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette12.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette12.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette12.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette12.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette12.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette12.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette12.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette12.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette12.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette12.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette12.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette12.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette12.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette12.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette12.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette12.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette12.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette12.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette12.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette12.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette12.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette12.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        engineeringBox->setPalette(palette12);
 
-        horizontalLayout_25->addWidget(checkBox_15);
+        horizontalLayout_25->addWidget(engineeringBox);
 
-        spinBox_16 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_16->setObjectName(QStringLiteral("spinBox_16"));
-        spinBox_16->setMinimumSize(QSize(37, 20));
-        spinBox_16->setMaximumSize(QSize(37, 20));
+        engineeringValue = new QSpinBox(gridLayoutWidget_5);
+        engineeringValue->setObjectName(QStringLiteral("engineeringValue"));
+        engineeringValue->setMinimumSize(QSize(37, 20));
+        engineeringValue->setMaximumSize(QSize(37, 20));
 
-        horizontalLayout_25->addWidget(spinBox_16);
+        horizontalLayout_25->addWidget(engineeringValue);
 
-        label_26 = new QLabel(gridLayoutWidget_5);
-        label_26->setObjectName(QStringLiteral("label_26"));
-        label_26->setMinimumSize(QSize(30, 0));
-        label_26->setMaximumSize(QSize(30, 16777215));
+        engineeringLabel = new QLabel(gridLayoutWidget_5);
+        engineeringLabel->setObjectName(QStringLiteral("engineeringLabel"));
+        engineeringLabel->setMinimumSize(QSize(30, 0));
+        engineeringLabel->setMaximumSize(QSize(30, 16777215));
 
-        horizontalLayout_25->addWidget(label_26);
+        horizontalLayout_25->addWidget(engineeringLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_25, 4, 2, 1, 1);
@@ -1068,24 +1428,54 @@ public:
         horizontalLayout_27 = new QHBoxLayout();
         horizontalLayout_27->setSpacing(6);
         horizontalLayout_27->setObjectName(QStringLiteral("horizontalLayout_27"));
-        checkBox_11 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_11->setObjectName(QStringLiteral("checkBox_11"));
+        historyBox = new QCheckBox(gridLayoutWidget_5);
+        historyBox->setObjectName(QStringLiteral("historyBox"));
+        historyBox->setEnabled(false);
+        QPalette palette13;
+        palette13.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette13.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette13.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette13.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette13.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette13.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette13.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette13.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette13.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette13.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette13.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette13.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette13.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette13.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette13.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette13.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette13.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette13.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette13.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette13.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette13.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette13.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette13.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette13.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette13.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette13.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette13.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        historyBox->setPalette(palette13);
 
-        horizontalLayout_27->addWidget(checkBox_11);
+        horizontalLayout_27->addWidget(historyBox);
 
-        spinBox_18 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_18->setObjectName(QStringLiteral("spinBox_18"));
-        spinBox_18->setMinimumSize(QSize(37, 20));
-        spinBox_18->setMaximumSize(QSize(37, 20));
+        historyValue = new QSpinBox(gridLayoutWidget_5);
+        historyValue->setObjectName(QStringLiteral("historyValue"));
+        historyValue->setMinimumSize(QSize(37, 20));
+        historyValue->setMaximumSize(QSize(37, 20));
 
-        horizontalLayout_27->addWidget(spinBox_18);
+        horizontalLayout_27->addWidget(historyValue);
 
-        label_28 = new QLabel(gridLayoutWidget_5);
-        label_28->setObjectName(QStringLiteral("label_28"));
-        label_28->setMinimumSize(QSize(30, 0));
-        label_28->setMaximumSize(QSize(30, 16777215));
+        historyLabel = new QLabel(gridLayoutWidget_5);
+        historyLabel->setObjectName(QStringLiteral("historyLabel"));
+        historyLabel->setMinimumSize(QSize(30, 0));
+        historyLabel->setMaximumSize(QSize(30, 16777215));
 
-        horizontalLayout_27->addWidget(label_28);
+        horizontalLayout_27->addWidget(historyLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_27, 6, 2, 1, 1);
@@ -1096,34 +1486,64 @@ public:
         horizontalLayout_47 = new QHBoxLayout();
         horizontalLayout_47->setSpacing(1);
         horizontalLayout_47->setObjectName(QStringLiteral("horizontalLayout_47"));
-        checkBox_42 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_42->setObjectName(QStringLiteral("checkBox_42"));
+        craftBox2 = new QCheckBox(gridLayoutWidget_5);
+        craftBox2->setObjectName(QStringLiteral("craftBox2"));
+        craftBox2->setEnabled(false);
+        QPalette palette14;
+        palette14.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette14.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette14.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette14.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette14.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette14.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette14.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette14.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette14.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette14.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette14.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette14.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette14.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette14.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette14.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette14.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette14.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette14.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette14.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette14.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette14.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette14.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette14.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette14.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette14.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette14.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette14.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        craftBox2->setPalette(palette14);
 
-        horizontalLayout_47->addWidget(checkBox_42);
+        horizontalLayout_47->addWidget(craftBox2);
 
-        lineEdit_8 = new QLineEdit(gridLayoutWidget_5);
-        lineEdit_8->setObjectName(QStringLiteral("lineEdit_8"));
-        lineEdit_8->setMinimumSize(QSize(80, 23));
-        lineEdit_8->setMaximumSize(QSize(80, 23));
+        craftType2 = new QLineEdit(gridLayoutWidget_5);
+        craftType2->setObjectName(QStringLiteral("craftType2"));
+        craftType2->setMinimumSize(QSize(80, 23));
+        craftType2->setMaximumSize(QSize(80, 23));
 
-        horizontalLayout_47->addWidget(lineEdit_8);
+        horizontalLayout_47->addWidget(craftType2);
 
 
         horizontalLayout_19->addLayout(horizontalLayout_47);
 
-        spinBox_35 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_35->setObjectName(QStringLiteral("spinBox_35"));
-        spinBox_35->setMinimumSize(QSize(37, 20));
-        spinBox_35->setMaximumSize(QSize(37, 20));
+        craftValue2 = new QSpinBox(gridLayoutWidget_5);
+        craftValue2->setObjectName(QStringLiteral("craftValue2"));
+        craftValue2->setMinimumSize(QSize(37, 20));
+        craftValue2->setMaximumSize(QSize(37, 20));
 
-        horizontalLayout_19->addWidget(spinBox_35);
+        horizontalLayout_19->addWidget(craftValue2);
 
-        label_44 = new QLabel(gridLayoutWidget_5);
-        label_44->setObjectName(QStringLiteral("label_44"));
-        label_44->setMinimumSize(QSize(30, 20));
-        label_44->setMaximumSize(QSize(30, 20));
+        craftLabel2 = new QLabel(gridLayoutWidget_5);
+        craftLabel2->setObjectName(QStringLiteral("craftLabel2"));
+        craftLabel2->setMinimumSize(QSize(30, 20));
+        craftLabel2->setMaximumSize(QSize(30, 20));
 
-        horizontalLayout_19->addWidget(label_44);
+        horizontalLayout_19->addWidget(craftLabel2);
 
 
         gridLayout_5->addLayout(horizontalLayout_19, 5, 0, 1, 1);
@@ -1131,26 +1551,56 @@ public:
         horizontalLayout_39 = new QHBoxLayout();
         horizontalLayout_39->setSpacing(6);
         horizontalLayout_39->setObjectName(QStringLiteral("horizontalLayout_39"));
-        checkBox_27 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_27->setObjectName(QStringLiteral("checkBox_27"));
+        rideBox = new QCheckBox(gridLayoutWidget_5);
+        rideBox->setObjectName(QStringLiteral("rideBox"));
+        rideBox->setEnabled(false);
+        QPalette palette15;
+        palette15.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette15.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette15.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette15.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette15.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette15.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette15.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette15.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette15.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette15.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette15.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette15.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette15.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette15.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette15.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette15.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette15.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette15.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette15.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette15.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette15.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette15.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette15.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette15.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette15.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette15.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette15.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        rideBox->setPalette(palette15);
 
-        horizontalLayout_39->addWidget(checkBox_27);
+        horizontalLayout_39->addWidget(rideBox);
 
-        spinBox_28 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_28->setObjectName(QStringLiteral("spinBox_28"));
-        spinBox_28->setMinimumSize(QSize(37, 0));
-        spinBox_28->setMaximumSize(QSize(37, 16777215));
-        spinBox_28->setMinimum(0);
-        spinBox_28->setValue(0);
+        rideValue = new QSpinBox(gridLayoutWidget_5);
+        rideValue->setObjectName(QStringLiteral("rideValue"));
+        rideValue->setMinimumSize(QSize(37, 0));
+        rideValue->setMaximumSize(QSize(37, 16777215));
+        rideValue->setMinimum(0);
+        rideValue->setValue(0);
 
-        horizontalLayout_39->addWidget(spinBox_28);
+        horizontalLayout_39->addWidget(rideValue);
 
-        label_30 = new QLabel(gridLayoutWidget_5);
-        label_30->setObjectName(QStringLiteral("label_30"));
-        label_30->setMinimumSize(QSize(30, 0));
-        label_30->setMaximumSize(QSize(30, 16777215));
+        rideLabel = new QLabel(gridLayoutWidget_5);
+        rideLabel->setObjectName(QStringLiteral("rideLabel"));
+        rideLabel->setMinimumSize(QSize(30, 0));
+        rideLabel->setMaximumSize(QSize(30, 16777215));
 
-        horizontalLayout_39->addWidget(label_30);
+        horizontalLayout_39->addWidget(rideLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_39, 5, 4, 1, 1);
@@ -1158,24 +1608,54 @@ public:
         horizontalLayout_40 = new QHBoxLayout();
         horizontalLayout_40->setSpacing(6);
         horizontalLayout_40->setObjectName(QStringLiteral("horizontalLayout_40"));
-        checkBox_28 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_28->setObjectName(QStringLiteral("checkBox_28"));
+        senseBox = new QCheckBox(gridLayoutWidget_5);
+        senseBox->setObjectName(QStringLiteral("senseBox"));
+        senseBox->setEnabled(false);
+        QPalette palette16;
+        palette16.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette16.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette16.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette16.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette16.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette16.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette16.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette16.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette16.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette16.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette16.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette16.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette16.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette16.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette16.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette16.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette16.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette16.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette16.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette16.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette16.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette16.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette16.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette16.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette16.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette16.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette16.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        senseBox->setPalette(palette16);
 
-        horizontalLayout_40->addWidget(checkBox_28);
+        horizontalLayout_40->addWidget(senseBox);
 
-        spinBox_29 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_29->setObjectName(QStringLiteral("spinBox_29"));
-        spinBox_29->setMinimumSize(QSize(37, 0));
-        spinBox_29->setMaximumSize(QSize(37, 16777215));
+        senseValue = new QSpinBox(gridLayoutWidget_5);
+        senseValue->setObjectName(QStringLiteral("senseValue"));
+        senseValue->setMinimumSize(QSize(37, 0));
+        senseValue->setMaximumSize(QSize(37, 16777215));
 
-        horizontalLayout_40->addWidget(spinBox_29);
+        horizontalLayout_40->addWidget(senseValue);
 
-        label_37 = new QLabel(gridLayoutWidget_5);
-        label_37->setObjectName(QStringLiteral("label_37"));
-        label_37->setMinimumSize(QSize(30, 0));
-        label_37->setMaximumSize(QSize(30, 16777215));
+        senseLabel = new QLabel(gridLayoutWidget_5);
+        senseLabel->setObjectName(QStringLiteral("senseLabel"));
+        senseLabel->setMinimumSize(QSize(30, 0));
+        senseLabel->setMaximumSize(QSize(30, 16777215));
 
-        horizontalLayout_40->addWidget(label_37);
+        horizontalLayout_40->addWidget(senseLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_40, 6, 4, 1, 1);
@@ -1183,24 +1663,54 @@ public:
         horizontalLayout_28 = new QHBoxLayout();
         horizontalLayout_28->setSpacing(6);
         horizontalLayout_28->setObjectName(QStringLiteral("horizontalLayout_28"));
-        checkBox_19 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_19->setObjectName(QStringLiteral("checkBox_19"));
+        localBox = new QCheckBox(gridLayoutWidget_5);
+        localBox->setObjectName(QStringLiteral("localBox"));
+        localBox->setEnabled(false);
+        QPalette palette17;
+        palette17.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette17.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette17.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette17.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette17.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette17.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette17.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette17.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette17.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette17.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette17.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette17.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette17.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette17.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette17.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette17.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette17.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette17.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette17.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette17.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette17.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette17.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette17.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette17.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette17.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette17.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette17.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        localBox->setPalette(palette17);
 
-        horizontalLayout_28->addWidget(checkBox_19);
+        horizontalLayout_28->addWidget(localBox);
 
-        spinBox_19 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_19->setObjectName(QStringLiteral("spinBox_19"));
-        spinBox_19->setMinimumSize(QSize(37, 20));
-        spinBox_19->setMaximumSize(QSize(37, 20));
+        localValue = new QSpinBox(gridLayoutWidget_5);
+        localValue->setObjectName(QStringLiteral("localValue"));
+        localValue->setMinimumSize(QSize(37, 20));
+        localValue->setMaximumSize(QSize(37, 20));
 
-        horizontalLayout_28->addWidget(spinBox_19);
+        horizontalLayout_28->addWidget(localValue);
 
-        label_29 = new QLabel(gridLayoutWidget_5);
-        label_29->setObjectName(QStringLiteral("label_29"));
-        label_29->setMinimumSize(QSize(30, 0));
-        label_29->setMaximumSize(QSize(30, 16777215));
+        localLabel = new QLabel(gridLayoutWidget_5);
+        localLabel->setObjectName(QStringLiteral("localLabel"));
+        localLabel->setMinimumSize(QSize(30, 0));
+        localLabel->setMaximumSize(QSize(30, 16777215));
 
-        horizontalLayout_28->addWidget(label_29);
+        horizontalLayout_28->addWidget(localLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_28, 7, 2, 1, 1);
@@ -1208,23 +1718,53 @@ public:
         horizontalLayout_12 = new QHBoxLayout();
         horizontalLayout_12->setSpacing(6);
         horizontalLayout_12->setObjectName(QStringLiteral("horizontalLayout_12"));
-        checkBox_8 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_8->setObjectName(QStringLiteral("checkBox_8"));
+        diplomacyBox = new QCheckBox(gridLayoutWidget_5);
+        diplomacyBox->setObjectName(QStringLiteral("diplomacyBox"));
+        diplomacyBox->setEnabled(false);
+        QPalette palette18;
+        palette18.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette18.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette18.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette18.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette18.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette18.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette18.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette18.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette18.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette18.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette18.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette18.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette18.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette18.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette18.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette18.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette18.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette18.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette18.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette18.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette18.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette18.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette18.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette18.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette18.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette18.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette18.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        diplomacyBox->setPalette(palette18);
 
-        horizontalLayout_12->addWidget(checkBox_8);
+        horizontalLayout_12->addWidget(diplomacyBox);
 
-        spinBox_6 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_6->setObjectName(QStringLiteral("spinBox_6"));
-        spinBox_6->setMaximumSize(QSize(37, 20));
+        diplomacyValue = new QSpinBox(gridLayoutWidget_5);
+        diplomacyValue->setObjectName(QStringLiteral("diplomacyValue"));
+        diplomacyValue->setMaximumSize(QSize(37, 20));
 
-        horizontalLayout_12->addWidget(spinBox_6);
+        horizontalLayout_12->addWidget(diplomacyValue);
 
-        label_6 = new QLabel(gridLayoutWidget_5);
-        label_6->setObjectName(QStringLiteral("label_6"));
-        label_6->setMinimumSize(QSize(30, 20));
-        label_6->setMaximumSize(QSize(30, 20));
+        diplomacyLabel = new QLabel(gridLayoutWidget_5);
+        diplomacyLabel->setObjectName(QStringLiteral("diplomacyLabel"));
+        diplomacyLabel->setMinimumSize(QSize(30, 20));
+        diplomacyLabel->setMaximumSize(QSize(30, 20));
 
-        horizontalLayout_12->addWidget(label_6);
+        horizontalLayout_12->addWidget(diplomacyLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_12, 7, 0, 1, 1);
@@ -1232,24 +1772,54 @@ public:
         horizontalLayout_41 = new QHBoxLayout();
         horizontalLayout_41->setSpacing(6);
         horizontalLayout_41->setObjectName(QStringLiteral("horizontalLayout_41"));
-        checkBox_29 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_29->setObjectName(QStringLiteral("checkBox_29"));
+        sleightBox = new QCheckBox(gridLayoutWidget_5);
+        sleightBox->setObjectName(QStringLiteral("sleightBox"));
+        sleightBox->setEnabled(false);
+        QPalette palette19;
+        palette19.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette19.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette19.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette19.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette19.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette19.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette19.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette19.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette19.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette19.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette19.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette19.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette19.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette19.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette19.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette19.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette19.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette19.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette19.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette19.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette19.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette19.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette19.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette19.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette19.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette19.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette19.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        sleightBox->setPalette(palette19);
 
-        horizontalLayout_41->addWidget(checkBox_29);
+        horizontalLayout_41->addWidget(sleightBox);
 
-        spinBox_30 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_30->setObjectName(QStringLiteral("spinBox_30"));
-        spinBox_30->setMinimumSize(QSize(37, 0));
-        spinBox_30->setMaximumSize(QSize(37, 16777215));
+        sleightValue = new QSpinBox(gridLayoutWidget_5);
+        sleightValue->setObjectName(QStringLiteral("sleightValue"));
+        sleightValue->setMinimumSize(QSize(37, 0));
+        sleightValue->setMaximumSize(QSize(37, 16777215));
 
-        horizontalLayout_41->addWidget(spinBox_30);
+        horizontalLayout_41->addWidget(sleightValue);
 
-        label_38 = new QLabel(gridLayoutWidget_5);
-        label_38->setObjectName(QStringLiteral("label_38"));
-        label_38->setMinimumSize(QSize(30, 0));
-        label_38->setMaximumSize(QSize(30, 16777215));
+        sleightLabel = new QLabel(gridLayoutWidget_5);
+        sleightLabel->setObjectName(QStringLiteral("sleightLabel"));
+        sleightLabel->setMinimumSize(QSize(30, 0));
+        sleightLabel->setMaximumSize(QSize(30, 16777215));
 
-        horizontalLayout_41->addWidget(label_38);
+        horizontalLayout_41->addWidget(sleightLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_41, 7, 4, 1, 1);
@@ -1257,23 +1827,53 @@ public:
         horizontalLayout_17 = new QHBoxLayout();
         horizontalLayout_17->setSpacing(6);
         horizontalLayout_17->setObjectName(QStringLiteral("horizontalLayout_17"));
-        checkBox_7 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_7->setObjectName(QStringLiteral("checkBox_7"));
+        disableBox = new QCheckBox(gridLayoutWidget_5);
+        disableBox->setObjectName(QStringLiteral("disableBox"));
+        disableBox->setEnabled(false);
+        QPalette palette20;
+        palette20.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette20.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette20.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette20.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette20.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette20.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette20.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette20.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette20.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette20.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette20.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette20.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette20.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette20.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette20.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette20.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette20.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette20.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette20.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette20.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette20.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette20.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette20.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette20.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette20.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette20.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette20.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        disableBox->setPalette(palette20);
 
-        horizontalLayout_17->addWidget(checkBox_7);
+        horizontalLayout_17->addWidget(disableBox);
 
-        spinBox_7 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_7->setObjectName(QStringLiteral("spinBox_7"));
-        spinBox_7->setMaximumSize(QSize(37, 20));
+        disableValue = new QSpinBox(gridLayoutWidget_5);
+        disableValue->setObjectName(QStringLiteral("disableValue"));
+        disableValue->setMaximumSize(QSize(37, 20));
 
-        horizontalLayout_17->addWidget(spinBox_7);
+        horizontalLayout_17->addWidget(disableValue);
 
-        label_16 = new QLabel(gridLayoutWidget_5);
-        label_16->setObjectName(QStringLiteral("label_16"));
-        label_16->setMinimumSize(QSize(30, 20));
-        label_16->setMaximumSize(QSize(30, 20));
+        disableLabel = new QLabel(gridLayoutWidget_5);
+        disableLabel->setObjectName(QStringLiteral("disableLabel"));
+        disableLabel->setMinimumSize(QSize(30, 20));
+        disableLabel->setMaximumSize(QSize(30, 20));
 
-        horizontalLayout_17->addWidget(label_16);
+        horizontalLayout_17->addWidget(disableLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_17, 8, 0, 1, 1);
@@ -1281,23 +1881,53 @@ public:
         horizontalLayout_29 = new QHBoxLayout();
         horizontalLayout_29->setSpacing(6);
         horizontalLayout_29->setObjectName(QStringLiteral("horizontalLayout_29"));
-        checkBox_20 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_20->setObjectName(QStringLiteral("checkBox_20"));
+        natureBox = new QCheckBox(gridLayoutWidget_5);
+        natureBox->setObjectName(QStringLiteral("natureBox"));
+        natureBox->setEnabled(false);
+        QPalette palette21;
+        palette21.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette21.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette21.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette21.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette21.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette21.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette21.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette21.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette21.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette21.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette21.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette21.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette21.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette21.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette21.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette21.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette21.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette21.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette21.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette21.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette21.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette21.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette21.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette21.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette21.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette21.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette21.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        natureBox->setPalette(palette21);
 
-        horizontalLayout_29->addWidget(checkBox_20);
+        horizontalLayout_29->addWidget(natureBox);
 
-        spinBox_20 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_20->setObjectName(QStringLiteral("spinBox_20"));
-        spinBox_20->setMaximumSize(QSize(37, 16777215));
+        natureValue = new QSpinBox(gridLayoutWidget_5);
+        natureValue->setObjectName(QStringLiteral("natureValue"));
+        natureValue->setMaximumSize(QSize(37, 16777215));
 
-        horizontalLayout_29->addWidget(spinBox_20);
+        horizontalLayout_29->addWidget(natureValue);
 
-        label_31 = new QLabel(gridLayoutWidget_5);
-        label_31->setObjectName(QStringLiteral("label_31"));
-        label_31->setMinimumSize(QSize(30, 0));
-        label_31->setMaximumSize(QSize(30, 16777215));
+        natureLabel = new QLabel(gridLayoutWidget_5);
+        natureLabel->setObjectName(QStringLiteral("natureLabel"));
+        natureLabel->setMinimumSize(QSize(30, 0));
+        natureLabel->setMaximumSize(QSize(30, 16777215));
 
-        horizontalLayout_29->addWidget(label_31);
+        horizontalLayout_29->addWidget(natureLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_29, 8, 2, 1, 1);
@@ -1305,24 +1935,54 @@ public:
         horizontalLayout_42 = new QHBoxLayout();
         horizontalLayout_42->setSpacing(6);
         horizontalLayout_42->setObjectName(QStringLiteral("horizontalLayout_42"));
-        checkBox_30 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_30->setObjectName(QStringLiteral("checkBox_30"));
+        spellcraftBox = new QCheckBox(gridLayoutWidget_5);
+        spellcraftBox->setObjectName(QStringLiteral("spellcraftBox"));
+        spellcraftBox->setEnabled(false);
+        QPalette palette22;
+        palette22.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette22.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette22.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette22.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette22.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette22.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette22.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette22.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette22.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette22.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette22.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette22.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette22.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette22.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette22.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette22.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette22.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette22.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette22.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette22.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette22.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette22.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette22.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette22.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette22.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette22.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette22.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        spellcraftBox->setPalette(palette22);
 
-        horizontalLayout_42->addWidget(checkBox_30);
+        horizontalLayout_42->addWidget(spellcraftBox);
 
-        spinBox_31 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_31->setObjectName(QStringLiteral("spinBox_31"));
-        spinBox_31->setMinimumSize(QSize(37, 0));
-        spinBox_31->setMaximumSize(QSize(37, 16777215));
+        spellcraftValue = new QSpinBox(gridLayoutWidget_5);
+        spellcraftValue->setObjectName(QStringLiteral("spellcraftValue"));
+        spellcraftValue->setMinimumSize(QSize(37, 0));
+        spellcraftValue->setMaximumSize(QSize(37, 16777215));
 
-        horizontalLayout_42->addWidget(spinBox_31);
+        horizontalLayout_42->addWidget(spellcraftValue);
 
-        label_43 = new QLabel(gridLayoutWidget_5);
-        label_43->setObjectName(QStringLiteral("label_43"));
-        label_43->setMinimumSize(QSize(30, 0));
-        label_43->setMaximumSize(QSize(30, 16777215));
+        spellcraftLabel = new QLabel(gridLayoutWidget_5);
+        spellcraftLabel->setObjectName(QStringLiteral("spellcraftLabel"));
+        spellcraftLabel->setMinimumSize(QSize(30, 0));
+        spellcraftLabel->setMaximumSize(QSize(30, 16777215));
 
-        horizontalLayout_42->addWidget(label_43);
+        horizontalLayout_42->addWidget(spellcraftLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_42, 8, 4, 1, 1);
@@ -1330,23 +1990,53 @@ public:
         horizontalLayout_16 = new QHBoxLayout();
         horizontalLayout_16->setSpacing(6);
         horizontalLayout_16->setObjectName(QStringLiteral("horizontalLayout_16"));
-        checkBox_9 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_9->setObjectName(QStringLiteral("checkBox_9"));
+        disguiseBox = new QCheckBox(gridLayoutWidget_5);
+        disguiseBox->setObjectName(QStringLiteral("disguiseBox"));
+        disguiseBox->setEnabled(false);
+        QPalette palette23;
+        palette23.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette23.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette23.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette23.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette23.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette23.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette23.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette23.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette23.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette23.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette23.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette23.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette23.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette23.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette23.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette23.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette23.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette23.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette23.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette23.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette23.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette23.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette23.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette23.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette23.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette23.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette23.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        disguiseBox->setPalette(palette23);
 
-        horizontalLayout_16->addWidget(checkBox_9);
+        horizontalLayout_16->addWidget(disguiseBox);
 
-        spinBox_8 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_8->setObjectName(QStringLiteral("spinBox_8"));
-        spinBox_8->setMaximumSize(QSize(37, 20));
+        disguiseValue = new QSpinBox(gridLayoutWidget_5);
+        disguiseValue->setObjectName(QStringLiteral("disguiseValue"));
+        disguiseValue->setMaximumSize(QSize(37, 20));
 
-        horizontalLayout_16->addWidget(spinBox_8);
+        horizontalLayout_16->addWidget(disguiseValue);
 
-        label_17 = new QLabel(gridLayoutWidget_5);
-        label_17->setObjectName(QStringLiteral("label_17"));
-        label_17->setMinimumSize(QSize(30, 20));
-        label_17->setMaximumSize(QSize(30, 20));
+        disguiseLabel = new QLabel(gridLayoutWidget_5);
+        disguiseLabel->setObjectName(QStringLiteral("disguiseLabel"));
+        disguiseLabel->setMinimumSize(QSize(30, 20));
+        disguiseLabel->setMaximumSize(QSize(30, 20));
 
-        horizontalLayout_16->addWidget(label_17);
+        horizontalLayout_16->addWidget(disguiseLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_16, 9, 0, 1, 1);
@@ -1354,23 +2044,53 @@ public:
         horizontalLayout_30 = new QHBoxLayout();
         horizontalLayout_30->setSpacing(6);
         horizontalLayout_30->setObjectName(QStringLiteral("horizontalLayout_30"));
-        checkBox_13 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_13->setObjectName(QStringLiteral("checkBox_13"));
+        nobilityBox = new QCheckBox(gridLayoutWidget_5);
+        nobilityBox->setObjectName(QStringLiteral("nobilityBox"));
+        nobilityBox->setEnabled(false);
+        QPalette palette24;
+        palette24.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette24.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette24.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette24.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette24.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette24.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette24.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette24.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette24.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette24.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette24.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette24.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette24.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette24.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette24.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette24.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette24.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette24.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette24.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette24.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette24.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette24.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette24.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette24.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette24.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette24.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette24.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        nobilityBox->setPalette(palette24);
 
-        horizontalLayout_30->addWidget(checkBox_13);
+        horizontalLayout_30->addWidget(nobilityBox);
 
-        spinBox_21 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_21->setObjectName(QStringLiteral("spinBox_21"));
-        spinBox_21->setMaximumSize(QSize(37, 16777215));
+        nobilityValue = new QSpinBox(gridLayoutWidget_5);
+        nobilityValue->setObjectName(QStringLiteral("nobilityValue"));
+        nobilityValue->setMaximumSize(QSize(37, 16777215));
 
-        horizontalLayout_30->addWidget(spinBox_21);
+        horizontalLayout_30->addWidget(nobilityValue);
 
-        label_32 = new QLabel(gridLayoutWidget_5);
-        label_32->setObjectName(QStringLiteral("label_32"));
-        label_32->setMinimumSize(QSize(30, 0));
-        label_32->setMaximumSize(QSize(30, 16777215));
+        nobilityLabel = new QLabel(gridLayoutWidget_5);
+        nobilityLabel->setObjectName(QStringLiteral("nobilityLabel"));
+        nobilityLabel->setMinimumSize(QSize(30, 0));
+        nobilityLabel->setMaximumSize(QSize(30, 16777215));
 
-        horizontalLayout_30->addWidget(label_32);
+        horizontalLayout_30->addWidget(nobilityLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_30, 9, 2, 1, 1);
@@ -1378,24 +2098,54 @@ public:
         horizontalLayout_43 = new QHBoxLayout();
         horizontalLayout_43->setSpacing(6);
         horizontalLayout_43->setObjectName(QStringLiteral("horizontalLayout_43"));
-        checkBox_31 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_31->setObjectName(QStringLiteral("checkBox_31"));
+        stealthBox = new QCheckBox(gridLayoutWidget_5);
+        stealthBox->setObjectName(QStringLiteral("stealthBox"));
+        stealthBox->setEnabled(false);
+        QPalette palette25;
+        palette25.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette25.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette25.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette25.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette25.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette25.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette25.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette25.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette25.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette25.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette25.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette25.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette25.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette25.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette25.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette25.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette25.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette25.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette25.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette25.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette25.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette25.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette25.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette25.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette25.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette25.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette25.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        stealthBox->setPalette(palette25);
 
-        horizontalLayout_43->addWidget(checkBox_31);
+        horizontalLayout_43->addWidget(stealthBox);
 
-        spinBox_32 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_32->setObjectName(QStringLiteral("spinBox_32"));
-        spinBox_32->setMinimumSize(QSize(37, 0));
-        spinBox_32->setMaximumSize(QSize(37, 16777215));
+        stealthValue = new QSpinBox(gridLayoutWidget_5);
+        stealthValue->setObjectName(QStringLiteral("stealthValue"));
+        stealthValue->setMinimumSize(QSize(37, 0));
+        stealthValue->setMaximumSize(QSize(37, 16777215));
 
-        horizontalLayout_43->addWidget(spinBox_32);
+        horizontalLayout_43->addWidget(stealthValue);
 
-        label_39 = new QLabel(gridLayoutWidget_5);
-        label_39->setObjectName(QStringLiteral("label_39"));
-        label_39->setMinimumSize(QSize(30, 0));
-        label_39->setMaximumSize(QSize(30, 16777215));
+        stealthLabel = new QLabel(gridLayoutWidget_5);
+        stealthLabel->setObjectName(QStringLiteral("stealthLabel"));
+        stealthLabel->setMinimumSize(QSize(30, 0));
+        stealthLabel->setMaximumSize(QSize(30, 16777215));
 
-        horizontalLayout_43->addWidget(label_39);
+        horizontalLayout_43->addWidget(stealthLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_43, 9, 4, 1, 1);
@@ -1403,23 +2153,53 @@ public:
         horizontalLayout_13 = new QHBoxLayout();
         horizontalLayout_13->setSpacing(6);
         horizontalLayout_13->setObjectName(QStringLiteral("horizontalLayout_13"));
-        checkBox_6 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_6->setObjectName(QStringLiteral("checkBox_6"));
+        escapeBox = new QCheckBox(gridLayoutWidget_5);
+        escapeBox->setObjectName(QStringLiteral("escapeBox"));
+        escapeBox->setEnabled(false);
+        QPalette palette26;
+        palette26.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette26.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette26.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette26.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette26.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette26.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette26.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette26.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette26.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette26.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette26.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette26.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette26.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette26.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette26.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette26.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette26.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette26.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette26.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette26.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette26.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette26.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette26.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette26.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette26.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette26.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette26.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        escapeBox->setPalette(palette26);
 
-        horizontalLayout_13->addWidget(checkBox_6);
+        horizontalLayout_13->addWidget(escapeBox);
 
-        spinBox_9 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_9->setObjectName(QStringLiteral("spinBox_9"));
-        spinBox_9->setMaximumSize(QSize(37, 20));
+        escapeValue = new QSpinBox(gridLayoutWidget_5);
+        escapeValue->setObjectName(QStringLiteral("escapeValue"));
+        escapeValue->setMaximumSize(QSize(37, 20));
 
-        horizontalLayout_13->addWidget(spinBox_9);
+        horizontalLayout_13->addWidget(escapeValue);
 
-        label_18 = new QLabel(gridLayoutWidget_5);
-        label_18->setObjectName(QStringLiteral("label_18"));
-        label_18->setMinimumSize(QSize(30, 20));
-        label_18->setMaximumSize(QSize(30, 20));
+        escapeLabel = new QLabel(gridLayoutWidget_5);
+        escapeLabel->setObjectName(QStringLiteral("escapeLabel"));
+        escapeLabel->setMinimumSize(QSize(30, 20));
+        escapeLabel->setMaximumSize(QSize(30, 20));
 
-        horizontalLayout_13->addWidget(label_18);
+        horizontalLayout_13->addWidget(escapeLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_13, 10, 0, 1, 1);
@@ -1427,23 +2207,53 @@ public:
         horizontalLayout_31 = new QHBoxLayout();
         horizontalLayout_31->setSpacing(6);
         horizontalLayout_31->setObjectName(QStringLiteral("horizontalLayout_31"));
-        checkBox_21 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_21->setObjectName(QStringLiteral("checkBox_21"));
+        planesBox = new QCheckBox(gridLayoutWidget_5);
+        planesBox->setObjectName(QStringLiteral("planesBox"));
+        planesBox->setEnabled(false);
+        QPalette palette27;
+        palette27.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette27.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette27.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette27.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette27.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette27.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette27.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette27.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette27.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette27.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette27.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette27.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette27.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette27.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette27.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette27.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette27.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette27.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette27.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette27.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette27.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette27.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette27.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette27.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette27.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette27.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette27.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        planesBox->setPalette(palette27);
 
-        horizontalLayout_31->addWidget(checkBox_21);
+        horizontalLayout_31->addWidget(planesBox);
 
-        spinBox_22 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_22->setObjectName(QStringLiteral("spinBox_22"));
-        spinBox_22->setMaximumSize(QSize(37, 16777215));
+        planesValue = new QSpinBox(gridLayoutWidget_5);
+        planesValue->setObjectName(QStringLiteral("planesValue"));
+        planesValue->setMaximumSize(QSize(37, 16777215));
 
-        horizontalLayout_31->addWidget(spinBox_22);
+        horizontalLayout_31->addWidget(planesValue);
 
-        label_33 = new QLabel(gridLayoutWidget_5);
-        label_33->setObjectName(QStringLiteral("label_33"));
-        label_33->setMinimumSize(QSize(30, 0));
-        label_33->setMaximumSize(QSize(30, 16777215));
+        planesLabel = new QLabel(gridLayoutWidget_5);
+        planesLabel->setObjectName(QStringLiteral("planesLabel"));
+        planesLabel->setMinimumSize(QSize(30, 0));
+        planesLabel->setMaximumSize(QSize(30, 16777215));
 
-        horizontalLayout_31->addWidget(label_33);
+        horizontalLayout_31->addWidget(planesLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_31, 10, 2, 1, 1);
@@ -1451,24 +2261,54 @@ public:
         horizontalLayout_44 = new QHBoxLayout();
         horizontalLayout_44->setSpacing(6);
         horizontalLayout_44->setObjectName(QStringLiteral("horizontalLayout_44"));
-        checkBox_32 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_32->setObjectName(QStringLiteral("checkBox_32"));
+        survivalBox = new QCheckBox(gridLayoutWidget_5);
+        survivalBox->setObjectName(QStringLiteral("survivalBox"));
+        survivalBox->setEnabled(false);
+        QPalette palette28;
+        palette28.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette28.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette28.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette28.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette28.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette28.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette28.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette28.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette28.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette28.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette28.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette28.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette28.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette28.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette28.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette28.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette28.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette28.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette28.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette28.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette28.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette28.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette28.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette28.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette28.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette28.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette28.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        survivalBox->setPalette(palette28);
 
-        horizontalLayout_44->addWidget(checkBox_32);
+        horizontalLayout_44->addWidget(survivalBox);
 
-        spinBox_33 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_33->setObjectName(QStringLiteral("spinBox_33"));
-        spinBox_33->setMinimumSize(QSize(37, 0));
-        spinBox_33->setMaximumSize(QSize(37, 16777215));
+        survivalValue = new QSpinBox(gridLayoutWidget_5);
+        survivalValue->setObjectName(QStringLiteral("survivalValue"));
+        survivalValue->setMinimumSize(QSize(37, 0));
+        survivalValue->setMaximumSize(QSize(37, 16777215));
 
-        horizontalLayout_44->addWidget(spinBox_33);
+        horizontalLayout_44->addWidget(survivalValue);
 
-        label_40 = new QLabel(gridLayoutWidget_5);
-        label_40->setObjectName(QStringLiteral("label_40"));
-        label_40->setMinimumSize(QSize(30, 0));
-        label_40->setMaximumSize(QSize(30, 16777215));
+        survivalLabel = new QLabel(gridLayoutWidget_5);
+        survivalLabel->setObjectName(QStringLiteral("survivalLabel"));
+        survivalLabel->setMinimumSize(QSize(30, 0));
+        survivalLabel->setMaximumSize(QSize(30, 16777215));
 
-        horizontalLayout_44->addWidget(label_40);
+        horizontalLayout_44->addWidget(survivalLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_44, 10, 4, 1, 1);
@@ -1476,23 +2316,53 @@ public:
         horizontalLayout_15 = new QHBoxLayout();
         horizontalLayout_15->setSpacing(6);
         horizontalLayout_15->setObjectName(QStringLiteral("horizontalLayout_15"));
-        checkBox_10 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_10->setObjectName(QStringLiteral("checkBox_10"));
+        flyBox = new QCheckBox(gridLayoutWidget_5);
+        flyBox->setObjectName(QStringLiteral("flyBox"));
+        flyBox->setEnabled(false);
+        QPalette palette29;
+        palette29.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette29.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette29.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette29.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette29.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette29.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette29.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette29.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette29.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette29.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette29.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette29.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette29.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette29.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette29.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette29.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette29.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette29.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette29.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette29.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette29.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette29.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette29.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette29.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette29.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette29.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette29.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        flyBox->setPalette(palette29);
 
-        horizontalLayout_15->addWidget(checkBox_10);
+        horizontalLayout_15->addWidget(flyBox);
 
-        spinBox_10 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_10->setObjectName(QStringLiteral("spinBox_10"));
-        spinBox_10->setMaximumSize(QSize(37, 20));
+        flyValue = new QSpinBox(gridLayoutWidget_5);
+        flyValue->setObjectName(QStringLiteral("flyValue"));
+        flyValue->setMaximumSize(QSize(37, 20));
 
-        horizontalLayout_15->addWidget(spinBox_10);
+        horizontalLayout_15->addWidget(flyValue);
 
-        label_19 = new QLabel(gridLayoutWidget_5);
-        label_19->setObjectName(QStringLiteral("label_19"));
-        label_19->setMinimumSize(QSize(30, 20));
-        label_19->setMaximumSize(QSize(30, 20));
+        flyLabel = new QLabel(gridLayoutWidget_5);
+        flyLabel->setObjectName(QStringLiteral("flyLabel"));
+        flyLabel->setMinimumSize(QSize(30, 20));
+        flyLabel->setMaximumSize(QSize(30, 20));
 
-        horizontalLayout_15->addWidget(label_19);
+        horizontalLayout_15->addWidget(flyLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_15, 11, 0, 1, 1);
@@ -1500,23 +2370,53 @@ public:
         horizontalLayout_32 = new QHBoxLayout();
         horizontalLayout_32->setSpacing(6);
         horizontalLayout_32->setObjectName(QStringLiteral("horizontalLayout_32"));
-        checkBox_22 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_22->setObjectName(QStringLiteral("checkBox_22"));
+        religionBox = new QCheckBox(gridLayoutWidget_5);
+        religionBox->setObjectName(QStringLiteral("religionBox"));
+        religionBox->setEnabled(false);
+        QPalette palette30;
+        palette30.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette30.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette30.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette30.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette30.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette30.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette30.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette30.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette30.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette30.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette30.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette30.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette30.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette30.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette30.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette30.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette30.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette30.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette30.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette30.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette30.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette30.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette30.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette30.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette30.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette30.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette30.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        religionBox->setPalette(palette30);
 
-        horizontalLayout_32->addWidget(checkBox_22);
+        horizontalLayout_32->addWidget(religionBox);
 
-        spinBox_23 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_23->setObjectName(QStringLiteral("spinBox_23"));
-        spinBox_23->setMaximumSize(QSize(37, 16777215));
+        religionValue = new QSpinBox(gridLayoutWidget_5);
+        religionValue->setObjectName(QStringLiteral("religionValue"));
+        religionValue->setMaximumSize(QSize(37, 16777215));
 
-        horizontalLayout_32->addWidget(spinBox_23);
+        horizontalLayout_32->addWidget(religionValue);
 
-        label_34 = new QLabel(gridLayoutWidget_5);
-        label_34->setObjectName(QStringLiteral("label_34"));
-        label_34->setMinimumSize(QSize(30, 0));
-        label_34->setMaximumSize(QSize(30, 16777215));
+        religionLabel = new QLabel(gridLayoutWidget_5);
+        religionLabel->setObjectName(QStringLiteral("religionLabel"));
+        religionLabel->setMinimumSize(QSize(30, 0));
+        religionLabel->setMaximumSize(QSize(30, 16777215));
 
-        horizontalLayout_32->addWidget(label_34);
+        horizontalLayout_32->addWidget(religionLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_32, 11, 2, 1, 1);
@@ -1524,24 +2424,54 @@ public:
         horizontalLayout_45 = new QHBoxLayout();
         horizontalLayout_45->setSpacing(6);
         horizontalLayout_45->setObjectName(QStringLiteral("horizontalLayout_45"));
-        checkBox_33 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_33->setObjectName(QStringLiteral("checkBox_33"));
+        swimBox = new QCheckBox(gridLayoutWidget_5);
+        swimBox->setObjectName(QStringLiteral("swimBox"));
+        swimBox->setEnabled(false);
+        QPalette palette31;
+        palette31.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette31.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette31.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette31.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette31.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette31.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette31.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette31.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette31.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette31.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette31.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette31.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette31.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette31.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette31.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette31.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette31.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette31.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette31.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette31.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette31.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette31.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette31.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette31.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette31.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette31.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette31.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        swimBox->setPalette(palette31);
 
-        horizontalLayout_45->addWidget(checkBox_33);
+        horizontalLayout_45->addWidget(swimBox);
 
-        spinBox_34 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_34->setObjectName(QStringLiteral("spinBox_34"));
-        spinBox_34->setMinimumSize(QSize(37, 0));
-        spinBox_34->setMaximumSize(QSize(37, 16777215));
+        swimValue = new QSpinBox(gridLayoutWidget_5);
+        swimValue->setObjectName(QStringLiteral("swimValue"));
+        swimValue->setMinimumSize(QSize(37, 0));
+        swimValue->setMaximumSize(QSize(37, 16777215));
 
-        horizontalLayout_45->addWidget(spinBox_34);
+        horizontalLayout_45->addWidget(swimValue);
 
-        label_41 = new QLabel(gridLayoutWidget_5);
-        label_41->setObjectName(QStringLiteral("label_41"));
-        label_41->setMinimumSize(QSize(30, 0));
-        label_41->setMaximumSize(QSize(30, 16777215));
+        swimLabel = new QLabel(gridLayoutWidget_5);
+        swimLabel->setObjectName(QStringLiteral("swimLabel"));
+        swimLabel->setMinimumSize(QSize(30, 0));
+        swimLabel->setMaximumSize(QSize(30, 16777215));
 
-        horizontalLayout_45->addWidget(label_41);
+        horizontalLayout_45->addWidget(swimLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_45, 11, 4, 1, 1);
@@ -1549,23 +2479,53 @@ public:
         horizontalLayout_14 = new QHBoxLayout();
         horizontalLayout_14->setSpacing(6);
         horizontalLayout_14->setObjectName(QStringLiteral("horizontalLayout_14"));
-        checkBox_17 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_17->setObjectName(QStringLiteral("checkBox_17"));
+        handleBox = new QCheckBox(gridLayoutWidget_5);
+        handleBox->setObjectName(QStringLiteral("handleBox"));
+        handleBox->setEnabled(false);
+        QPalette palette32;
+        palette32.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette32.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette32.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette32.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette32.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette32.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette32.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette32.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette32.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette32.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette32.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette32.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette32.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette32.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette32.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette32.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette32.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette32.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette32.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette32.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette32.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette32.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette32.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette32.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette32.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette32.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette32.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        handleBox->setPalette(palette32);
 
-        horizontalLayout_14->addWidget(checkBox_17);
+        horizontalLayout_14->addWidget(handleBox);
 
-        spinBox_11 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_11->setObjectName(QStringLiteral("spinBox_11"));
-        spinBox_11->setMaximumSize(QSize(37, 20));
+        handleValue = new QSpinBox(gridLayoutWidget_5);
+        handleValue->setObjectName(QStringLiteral("handleValue"));
+        handleValue->setMaximumSize(QSize(37, 20));
 
-        horizontalLayout_14->addWidget(spinBox_11);
+        horizontalLayout_14->addWidget(handleValue);
 
-        label_20 = new QLabel(gridLayoutWidget_5);
-        label_20->setObjectName(QStringLiteral("label_20"));
-        label_20->setMinimumSize(QSize(30, 20));
-        label_20->setMaximumSize(QSize(30, 20));
+        handleLabel = new QLabel(gridLayoutWidget_5);
+        handleLabel->setObjectName(QStringLiteral("handleLabel"));
+        handleLabel->setMinimumSize(QSize(30, 20));
+        handleLabel->setMaximumSize(QSize(30, 20));
 
-        horizontalLayout_14->addWidget(label_20);
+        horizontalLayout_14->addWidget(handleLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_14, 12, 0, 1, 1);
@@ -1573,23 +2533,53 @@ public:
         horizontalLayout_33 = new QHBoxLayout();
         horizontalLayout_33->setSpacing(6);
         horizontalLayout_33->setObjectName(QStringLiteral("horizontalLayout_33"));
-        checkBox_23 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_23->setObjectName(QStringLiteral("checkBox_23"));
+        linguisticsBox = new QCheckBox(gridLayoutWidget_5);
+        linguisticsBox->setObjectName(QStringLiteral("linguisticsBox"));
+        linguisticsBox->setEnabled(false);
+        QPalette palette33;
+        palette33.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette33.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette33.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette33.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette33.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette33.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette33.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette33.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette33.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette33.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette33.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette33.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette33.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette33.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette33.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette33.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette33.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette33.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette33.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette33.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette33.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette33.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette33.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette33.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette33.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette33.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette33.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        linguisticsBox->setPalette(palette33);
 
-        horizontalLayout_33->addWidget(checkBox_23);
+        horizontalLayout_33->addWidget(linguisticsBox);
 
-        spinBox_24 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_24->setObjectName(QStringLiteral("spinBox_24"));
-        spinBox_24->setMaximumSize(QSize(37, 16777215));
+        linguisticsValue = new QSpinBox(gridLayoutWidget_5);
+        linguisticsValue->setObjectName(QStringLiteral("linguisticsValue"));
+        linguisticsValue->setMaximumSize(QSize(37, 16777215));
 
-        horizontalLayout_33->addWidget(spinBox_24);
+        horizontalLayout_33->addWidget(linguisticsValue);
 
-        label_23 = new QLabel(gridLayoutWidget_5);
-        label_23->setObjectName(QStringLiteral("label_23"));
-        label_23->setMinimumSize(QSize(30, 0));
-        label_23->setMaximumSize(QSize(30, 16777215));
+        linguisticsLabel = new QLabel(gridLayoutWidget_5);
+        linguisticsLabel->setObjectName(QStringLiteral("linguisticsLabel"));
+        linguisticsLabel->setMinimumSize(QSize(30, 0));
+        linguisticsLabel->setMaximumSize(QSize(30, 16777215));
 
-        horizontalLayout_33->addWidget(label_23);
+        horizontalLayout_33->addWidget(linguisticsLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_33, 12, 2, 1, 1);
@@ -1597,24 +2587,54 @@ public:
         horizontalLayout_46 = new QHBoxLayout();
         horizontalLayout_46->setSpacing(6);
         horizontalLayout_46->setObjectName(QStringLiteral("horizontalLayout_46"));
-        checkBox_34 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_34->setObjectName(QStringLiteral("checkBox_34"));
+        useBox = new QCheckBox(gridLayoutWidget_5);
+        useBox->setObjectName(QStringLiteral("useBox"));
+        useBox->setEnabled(false);
+        QPalette palette34;
+        palette34.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette34.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette34.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette34.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette34.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette34.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette34.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette34.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette34.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette34.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette34.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette34.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette34.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette34.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette34.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette34.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette34.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette34.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette34.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette34.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette34.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette34.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette34.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette34.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette34.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette34.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette34.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        useBox->setPalette(palette34);
 
-        horizontalLayout_46->addWidget(checkBox_34);
+        horizontalLayout_46->addWidget(useBox);
 
-        spinBox_39 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_39->setObjectName(QStringLiteral("spinBox_39"));
-        spinBox_39->setMinimumSize(QSize(37, 0));
-        spinBox_39->setMaximumSize(QSize(37, 16777215));
+        useValue = new QSpinBox(gridLayoutWidget_5);
+        useValue->setObjectName(QStringLiteral("useValue"));
+        useValue->setMinimumSize(QSize(37, 0));
+        useValue->setMaximumSize(QSize(37, 16777215));
 
-        horizontalLayout_46->addWidget(spinBox_39);
+        horizontalLayout_46->addWidget(useValue);
 
-        label_42 = new QLabel(gridLayoutWidget_5);
-        label_42->setObjectName(QStringLiteral("label_42"));
-        label_42->setMinimumSize(QSize(30, 0));
-        label_42->setMaximumSize(QSize(30, 16777215));
+        useLabel = new QLabel(gridLayoutWidget_5);
+        useLabel->setObjectName(QStringLiteral("useLabel"));
+        useLabel->setMinimumSize(QSize(30, 0));
+        useLabel->setMaximumSize(QSize(30, 16777215));
 
-        horizontalLayout_46->addWidget(label_42);
+        horizontalLayout_46->addWidget(useLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_46, 12, 4, 1, 1);
@@ -1622,25 +2642,54 @@ public:
         horizontalLayout_8 = new QHBoxLayout();
         horizontalLayout_8->setSpacing(6);
         horizontalLayout_8->setObjectName(QStringLiteral("horizontalLayout_8"));
-        checkBox_25 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_25->setObjectName(QStringLiteral("checkBox_25"));
-        checkBox_25->setEnabled(true);
+        acrobaticsBox = new QCheckBox(gridLayoutWidget_5);
+        acrobaticsBox->setObjectName(QStringLiteral("acrobaticsBox"));
+        acrobaticsBox->setEnabled(false);
+        QPalette palette35;
+        palette35.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette35.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette35.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette35.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette35.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette35.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette35.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette35.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette35.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette35.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette35.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette35.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette35.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette35.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette35.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette35.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette35.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette35.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette35.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette35.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette35.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette35.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette35.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette35.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette35.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette35.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette35.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        acrobaticsBox->setPalette(palette35);
 
-        horizontalLayout_8->addWidget(checkBox_25);
+        horizontalLayout_8->addWidget(acrobaticsBox);
 
-        spinBox_40 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_40->setObjectName(QStringLiteral("spinBox_40"));
-        spinBox_40->setMinimumSize(QSize(37, 20));
-        spinBox_40->setMaximumSize(QSize(37, 20));
+        acrobaticsValue = new QSpinBox(gridLayoutWidget_5);
+        acrobaticsValue->setObjectName(QStringLiteral("acrobaticsValue"));
+        acrobaticsValue->setMinimumSize(QSize(37, 20));
+        acrobaticsValue->setMaximumSize(QSize(37, 20));
 
-        horizontalLayout_8->addWidget(spinBox_40);
+        horizontalLayout_8->addWidget(acrobaticsValue);
 
-        label_49 = new QLabel(gridLayoutWidget_5);
-        label_49->setObjectName(QStringLiteral("label_49"));
-        label_49->setMinimumSize(QSize(30, 20));
-        label_49->setMaximumSize(QSize(30, 16777215));
+        acrobaticsLabel = new QLabel(gridLayoutWidget_5);
+        acrobaticsLabel->setObjectName(QStringLiteral("acrobaticsLabel"));
+        acrobaticsLabel->setMinimumSize(QSize(30, 20));
+        acrobaticsLabel->setMaximumSize(QSize(30, 16777215));
 
-        horizontalLayout_8->addWidget(label_49);
+        horizontalLayout_8->addWidget(acrobaticsLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_8, 0, 0, 1, 1);
@@ -1648,24 +2697,43 @@ public:
         horizontalLayout_34 = new QHBoxLayout();
         horizontalLayout_34->setSpacing(6);
         horizontalLayout_34->setObjectName(QStringLiteral("horizontalLayout_34"));
-        checkBox_24 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_24->setObjectName(QStringLiteral("checkBox_24"));
+        perceptionBox = new QCheckBox(gridLayoutWidget_5);
+        perceptionBox->setObjectName(QStringLiteral("perceptionBox"));
+        perceptionBox->setEnabled(false);
+        QPalette palette36;
+        palette36.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette36.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette36.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette36.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette36.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette36.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette36.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette36.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette36.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette36.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette36.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette36.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        perceptionBox->setPalette(palette36);
+        QFont font;
+        font.setBold(false);
+        font.setWeight(50);
+        perceptionBox->setFont(font);
 
-        horizontalLayout_34->addWidget(checkBox_24);
+        horizontalLayout_34->addWidget(perceptionBox);
 
-        spinBox_25 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_25->setObjectName(QStringLiteral("spinBox_25"));
-        spinBox_25->setMinimumSize(QSize(37, 20));
-        spinBox_25->setMaximumSize(QSize(37, 23));
+        perceptionValue = new QSpinBox(gridLayoutWidget_5);
+        perceptionValue->setObjectName(QStringLiteral("perceptionValue"));
+        perceptionValue->setMinimumSize(QSize(37, 20));
+        perceptionValue->setMaximumSize(QSize(37, 23));
 
-        horizontalLayout_34->addWidget(spinBox_25);
+        horizontalLayout_34->addWidget(perceptionValue);
 
-        label_21 = new QLabel(gridLayoutWidget_5);
-        label_21->setObjectName(QStringLiteral("label_21"));
-        label_21->setMinimumSize(QSize(30, 20));
-        label_21->setMaximumSize(QSize(30, 23));
+        perceptionLabel = new QLabel(gridLayoutWidget_5);
+        perceptionLabel->setObjectName(QStringLiteral("perceptionLabel"));
+        perceptionLabel->setMinimumSize(QSize(30, 20));
+        perceptionLabel->setMaximumSize(QSize(30, 23));
 
-        horizontalLayout_34->addWidget(label_21);
+        horizontalLayout_34->addWidget(perceptionLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_34, 0, 4, 1, 1);
@@ -1673,24 +2741,54 @@ public:
         horizontalLayout_9 = new QHBoxLayout();
         horizontalLayout_9->setSpacing(6);
         horizontalLayout_9->setObjectName(QStringLiteral("horizontalLayout_9"));
-        checkBox_14 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_14->setObjectName(QStringLiteral("checkBox_14"));
+        healBox = new QCheckBox(gridLayoutWidget_5);
+        healBox->setObjectName(QStringLiteral("healBox"));
+        healBox->setEnabled(false);
+        QPalette palette37;
+        palette37.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette37.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette37.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette37.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette37.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette37.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette37.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette37.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette37.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette37.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette37.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette37.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette37.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette37.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette37.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette37.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette37.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette37.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette37.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette37.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette37.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette37.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette37.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette37.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette37.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette37.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette37.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        healBox->setPalette(palette37);
 
-        horizontalLayout_9->addWidget(checkBox_14);
+        horizontalLayout_9->addWidget(healBox);
 
-        spinBox_12 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_12->setObjectName(QStringLiteral("spinBox_12"));
-        spinBox_12->setMinimumSize(QSize(37, 20));
-        spinBox_12->setMaximumSize(QSize(37, 20));
+        healValue = new QSpinBox(gridLayoutWidget_5);
+        healValue->setObjectName(QStringLiteral("healValue"));
+        healValue->setMinimumSize(QSize(37, 20));
+        healValue->setMaximumSize(QSize(37, 20));
 
-        horizontalLayout_9->addWidget(spinBox_12);
+        horizontalLayout_9->addWidget(healValue);
 
-        label_22 = new QLabel(gridLayoutWidget_5);
-        label_22->setObjectName(QStringLiteral("label_22"));
-        label_22->setMinimumSize(QSize(30, 0));
-        label_22->setMaximumSize(QSize(30, 16777215));
+        healLabel = new QLabel(gridLayoutWidget_5);
+        healLabel->setObjectName(QStringLiteral("healLabel"));
+        healLabel->setMinimumSize(QSize(30, 0));
+        healLabel->setMaximumSize(QSize(30, 16777215));
 
-        horizontalLayout_9->addWidget(label_22);
+        horizontalLayout_9->addWidget(healLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_9, 0, 2, 1, 1);
@@ -1698,24 +2796,54 @@ public:
         horizontalLayout_10 = new QHBoxLayout();
         horizontalLayout_10->setSpacing(6);
         horizontalLayout_10->setObjectName(QStringLiteral("horizontalLayout_10"));
-        checkBox_2 = new QCheckBox(gridLayoutWidget_5);
-        checkBox_2->setObjectName(QStringLiteral("checkBox_2"));
+        appraiseBox = new QCheckBox(gridLayoutWidget_5);
+        appraiseBox->setObjectName(QStringLiteral("appraiseBox"));
+        appraiseBox->setEnabled(false);
+        QPalette palette38;
+        palette38.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette38.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette38.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette38.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette38.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette38.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette38.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette38.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette38.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette38.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette38.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette38.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette38.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette38.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette38.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette38.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette38.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette38.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette38.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette38.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette38.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette38.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette38.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette38.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette38.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette38.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette38.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        appraiseBox->setPalette(palette38);
 
-        horizontalLayout_10->addWidget(checkBox_2);
+        horizontalLayout_10->addWidget(appraiseBox);
 
-        spinBox_2 = new QSpinBox(gridLayoutWidget_5);
-        spinBox_2->setObjectName(QStringLiteral("spinBox_2"));
-        spinBox_2->setMinimumSize(QSize(37, 20));
-        spinBox_2->setMaximumSize(QSize(37, 20));
+        appraiseValue = new QSpinBox(gridLayoutWidget_5);
+        appraiseValue->setObjectName(QStringLiteral("appraiseValue"));
+        appraiseValue->setMinimumSize(QSize(37, 20));
+        appraiseValue->setMaximumSize(QSize(37, 20));
 
-        horizontalLayout_10->addWidget(spinBox_2);
+        horizontalLayout_10->addWidget(appraiseValue);
 
-        label_2 = new QLabel(gridLayoutWidget_5);
-        label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setMinimumSize(QSize(30, 20));
-        label_2->setMaximumSize(QSize(30, 16777215));
+        appraiseLabel = new QLabel(gridLayoutWidget_5);
+        appraiseLabel->setObjectName(QStringLiteral("appraiseLabel"));
+        appraiseLabel->setMinimumSize(QSize(30, 20));
+        appraiseLabel->setMaximumSize(QSize(30, 16777215));
 
-        horizontalLayout_10->addWidget(label_2);
+        horizontalLayout_10->addWidget(appraiseLabel);
 
 
         gridLayout_5->addLayout(horizontalLayout_10, 1, 0, 1, 1);
@@ -1730,6 +2858,55 @@ public:
 
         gridLayout_5->addWidget(label_52, 7, 3, 1, 1);
 
+        label_53 = new QLabel(page_4);
+        label_53->setObjectName(QStringLiteral("label_53"));
+        label_53->setGeometry(QRect(190, 420, 81, 16));
+        checkBox = new QCheckBox(page_4);
+        checkBox->setObjectName(QStringLiteral("checkBox"));
+        checkBox->setEnabled(false);
+        checkBox->setGeometry(QRect(110, 420, 70, 17));
+        QPalette palette39;
+        palette39.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette39.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette39.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette39.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette39.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette39.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette39.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette39.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette39.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette39.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette39.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette39.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette39.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette39.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette39.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette39.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette39.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette39.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette39.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette39.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette39.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette39.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette39.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette39.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette39.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette39.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette39.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        checkBox->setPalette(palette39);
+        checkBox->setCheckable(true);
+        checkBox->setChecked(true);
+        checkBox->setTristate(false);
+        label_2 = new QLabel(page_4);
+        label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setGeometry(QRect(370, 420, 121, 21));
+        QFont font1;
+        font1.setPointSize(8);
+        label_2->setFont(font1);
+        skillPointsAvailable = new QLabel(page_4);
+        skillPointsAvailable->setObjectName(QStringLiteral("skillPointsAvailable"));
+        skillPointsAvailable->setGeometry(QRect(540, 420, 71, 21));
+        skillPointsAvailable->setFont(font1);
         creationStack->addWidget(page_4);
         page_5 = new QWidget();
         page_5->setObjectName(QStringLiteral("page_5"));
@@ -1739,6 +2916,12 @@ public:
         previousButton_5 = new QPushButton(page_5);
         previousButton_5->setObjectName(QStringLiteral("previousButton_5"));
         previousButton_5->setGeometry(QRect(670, 420, 80, 23));
+        label_16 = new QLabel(page_5);
+        label_16->setObjectName(QStringLiteral("label_16"));
+        label_16->setGeometry(QRect(20, 20, 91, 16));
+        textBrowser = new QTextBrowser(page_5);
+        textBrowser->setObjectName(QStringLiteral("textBrowser"));
+        textBrowser->setGeometry(QRect(110, 20, 741, 381));
         creationStack->addWidget(page_5);
         page_6 = new QWidget();
         page_6->setObjectName(QStringLiteral("page_6"));
@@ -1749,6 +2932,9 @@ public:
         previousButton_6 = new QPushButton(page_6);
         previousButton_6->setObjectName(QStringLiteral("previousButton_6"));
         previousButton_6->setGeometry(QRect(670, 420, 80, 23));
+        label_4 = new QLabel(page_6);
+        label_4->setObjectName(QStringLiteral("label_4"));
+        label_4->setGeometry(QRect(20, 20, 121, 21));
         creationStack->addWidget(page_6);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
@@ -1804,6 +2990,8 @@ public:
         );
         rollDiceButton->setText(QApplication::translate("MainWindow", "Roll the dice!", 0));
         label->setText(QString());
+        label_3->setText(QApplication::translate("MainWindow", "Points total:", 0));
+        pointsTotalLabel->setText(QApplication::translate("MainWindow", "60", 0));
         nextButton->setText(QApplication::translate("MainWindow", "Next", 0));
         previousButton->setText(QApplication::translate("MainWindow", "Previous", 0));
         label_50->setText(QApplication::translate("MainWindow", "Determine Abbility Scores", 0));
@@ -1821,103 +3009,221 @@ public:
         previousButton_3->setText(QApplication::translate("MainWindow", "Previous", 0));
         label_14->setText(QApplication::translate("MainWindow", "Choose a Class", 0));
         radioButton_8->setText(QApplication::translate("MainWindow", "Barbarian", 0));
-        radioButton_13->setText(QApplication::translate("MainWindow", "Paladin", 0));
         radioButton_9->setText(QApplication::translate("MainWindow", "Bard", 0));
-        radioButton_14->setText(QApplication::translate("MainWindow", "Ranger", 0));
         radioButton_10->setText(QApplication::translate("MainWindow", "Cleric", 0));
-        radioButton_15->setText(QApplication::translate("MainWindow", "Rogue", 0));
         radioButton_11->setText(QApplication::translate("MainWindow", "Druid", 0));
-        radioButton_16->setText(QApplication::translate("MainWindow", "Sorcerer", 0));
         radioButton_12->setText(QApplication::translate("MainWindow", "Fighter", 0));
-        radioButton_17->setText(QApplication::translate("MainWindow", "Wizard", 0));
         radioButton_18->setText(QApplication::translate("MainWindow", "Monk", 0));
+        radioButton_13->setText(QApplication::translate("MainWindow", "Paladin", 0));
+        radioButton_14->setText(QApplication::translate("MainWindow", "Ranger", 0));
+        radioButton_15->setText(QApplication::translate("MainWindow", "Rogue", 0));
+        radioButton_16->setText(QApplication::translate("MainWindow", "Sorcerer", 0));
+        radioButton_17->setText(QApplication::translate("MainWindow", "Wizard", 0));
         nextButton_4->setText(QApplication::translate("MainWindow", "Next", 0));
         previousButton_4->setText(QApplication::translate("MainWindow", "Previous", 0));
         label_15->setText(QApplication::translate("MainWindow", "Pick your Skills", 0));
-        checkBox_5->setText(QApplication::translate("MainWindow", "Intimidate", 0));
-        label_48->setText(QApplication::translate("MainWindow", "CHA", 0));
-        checkBox_12->setText(QApplication::translate("MainWindow", "Knowledge (arcana)*", 0));
-        label_24->setText(QApplication::translate("MainWindow", "INT", 0));
-        checkBox_39->setText(QApplication::translate("MainWindow", "Perform", 0));
-        label_35->setText(QApplication::translate("MainWindow", "CHA", 0));
-        checkBox_18->setText(QApplication::translate("MainWindow", "Knowledge (dungeoneering)*", 0));
-        label_25->setText(QApplication::translate("MainWindow", "INT", 0));
-        checkBox_41->setText(QApplication::translate("MainWindow", "Profession*", 0));
-        label_36->setText(QApplication::translate("MainWindow", "WIS", 0));
-        checkBox_37->setText(QApplication::translate("MainWindow", "Craft", 0));
-        label_5->setText(QApplication::translate("MainWindow", "INT", 0));
-        checkBox_3->setText(QApplication::translate("MainWindow", "Bluff", 0));
-        label_3->setText(QApplication::translate("MainWindow", "CHA", 0));
-        checkBox_40->setText(QApplication::translate("MainWindow", "Profession*", 0));
-        label_46->setText(QApplication::translate("MainWindow", "WIS", 0));
-        checkBox_4->setText(QApplication::translate("MainWindow", "Climb", 0));
-        label_4->setText(QApplication::translate("MainWindow", "STR", 0));
-        checkBox_38->setText(QApplication::translate("MainWindow", "Perform", 0));
-        label_47->setText(QApplication::translate("MainWindow", "CHA", 0));
-        checkBox_16->setText(QApplication::translate("MainWindow", "Knowledge (geography)*", 0));
-        label_27->setText(QApplication::translate("MainWindow", "INT", 0));
-        checkBox_36->setText(QApplication::translate("MainWindow", "Craft", 0));
-        label_45->setText(QApplication::translate("MainWindow", "INT", 0));
-        checkBox_15->setText(QApplication::translate("MainWindow", "Knowledge (engineering)*", 0));
-        label_26->setText(QApplication::translate("MainWindow", "INT", 0));
-        checkBox_11->setText(QApplication::translate("MainWindow", "Knowledge (history)*", 0));
-        label_28->setText(QApplication::translate("MainWindow", "INT", 0));
-        checkBox_42->setText(QApplication::translate("MainWindow", "Craft", 0));
-        label_44->setText(QApplication::translate("MainWindow", "INT", 0));
-        checkBox_27->setText(QApplication::translate("MainWindow", "Ride", 0));
-        label_30->setText(QApplication::translate("MainWindow", "DEX", 0));
-        checkBox_28->setText(QApplication::translate("MainWindow", "Sense Motive", 0));
-        label_37->setText(QApplication::translate("MainWindow", "WIS", 0));
-        checkBox_19->setText(QApplication::translate("MainWindow", "Knowledge (loval)*", 0));
-        label_29->setText(QApplication::translate("MainWindow", "INT", 0));
-        checkBox_8->setText(QApplication::translate("MainWindow", "Diplomacy", 0));
-        label_6->setText(QApplication::translate("MainWindow", "CHA", 0));
-        checkBox_29->setText(QApplication::translate("MainWindow", "Sleight of Hand*", 0));
-        label_38->setText(QApplication::translate("MainWindow", "DEX", 0));
-        checkBox_7->setText(QApplication::translate("MainWindow", "Disable Device*", 0));
-        label_16->setText(QApplication::translate("MainWindow", "DEX", 0));
-        checkBox_20->setText(QApplication::translate("MainWindow", "Knowledge (nature)*", 0));
-        label_31->setText(QApplication::translate("MainWindow", "INT", 0));
-        checkBox_30->setText(QApplication::translate("MainWindow", "Spellcraft*", 0));
-        label_43->setText(QApplication::translate("MainWindow", "INT", 0));
-        checkBox_9->setText(QApplication::translate("MainWindow", "Disguise", 0));
-        label_17->setText(QApplication::translate("MainWindow", "CHA", 0));
-        checkBox_13->setText(QApplication::translate("MainWindow", "Knowledge (nobility)*", 0));
-        label_32->setText(QApplication::translate("MainWindow", "INT", 0));
-        checkBox_31->setText(QApplication::translate("MainWindow", "Stealth", 0));
-        label_39->setText(QApplication::translate("MainWindow", "DEX", 0));
-        checkBox_6->setText(QApplication::translate("MainWindow", "Escape Artist", 0));
-        label_18->setText(QApplication::translate("MainWindow", "DEX", 0));
-        checkBox_21->setText(QApplication::translate("MainWindow", "Knoledge (planes)*", 0));
-        label_33->setText(QApplication::translate("MainWindow", "INT", 0));
-        checkBox_32->setText(QApplication::translate("MainWindow", "Survival", 0));
-        label_40->setText(QApplication::translate("MainWindow", "WIS", 0));
-        checkBox_10->setText(QApplication::translate("MainWindow", "Fly", 0));
-        label_19->setText(QApplication::translate("MainWindow", "DEX", 0));
-        checkBox_22->setText(QApplication::translate("MainWindow", "Knowledge (religion)*", 0));
-        label_34->setText(QApplication::translate("MainWindow", "INT", 0));
-        checkBox_33->setText(QApplication::translate("MainWindow", "Swim", 0));
-        label_41->setText(QApplication::translate("MainWindow", "STR", 0));
-        checkBox_17->setText(QApplication::translate("MainWindow", "Handle Animal*", 0));
-        label_20->setText(QApplication::translate("MainWindow", "CHA", 0));
-        checkBox_23->setText(QApplication::translate("MainWindow", "Linguistics*", 0));
-        label_23->setText(QApplication::translate("MainWindow", "INT", 0));
-        checkBox_34->setText(QApplication::translate("MainWindow", "Use Magic Device*", 0));
-        label_42->setText(QApplication::translate("MainWindow", "CHA", 0));
-        checkBox_25->setText(QApplication::translate("MainWindow", "Acrobatics", 0));
-        label_49->setText(QApplication::translate("MainWindow", "DEX", 0));
-        checkBox_24->setText(QApplication::translate("MainWindow", "Perception", 0));
-        label_21->setText(QApplication::translate("MainWindow", "WIS", 0));
-        checkBox_14->setText(QApplication::translate("MainWindow", "Heal", 0));
-        label_22->setText(QApplication::translate("MainWindow", "WIS", 0));
-        checkBox_2->setText(QApplication::translate("MainWindow", "Appraise", 0));
-        label_2->setText(QApplication::translate("MainWindow", "INT", 0));
+        intimidateBox->setText(QApplication::translate("MainWindow", "Intimidate", 0));
+        intimidateLabel->setText(QApplication::translate("MainWindow", "CHA", 0));
+        arcanaBox->setText(QApplication::translate("MainWindow", "Knowledge (arcana)*", 0));
+        arcanaLabel->setText(QApplication::translate("MainWindow", "INT", 0));
+        performBox1->setText(QApplication::translate("MainWindow", "Perform", 0));
+        performLabel1->setText(QApplication::translate("MainWindow", "CHA", 0));
+        dungeoneeringBox->setText(QApplication::translate("MainWindow", "Knowledge (dungeoneering)*", 0));
+        dungeoneeringLabel->setText(QApplication::translate("MainWindow", "INT", 0));
+        professionBox1->setText(QApplication::translate("MainWindow", "Profession*", 0));
+        professionLabel1->setText(QApplication::translate("MainWindow", "WIS", 0));
+        craftBox1->setText(QApplication::translate("MainWindow", "Craft", 0));
+        craftLabel1->setText(QApplication::translate("MainWindow", "INT", 0));
+        bluffBox->setText(QApplication::translate("MainWindow", "Bluff", 0));
+        bluffLabel->setText(QApplication::translate("MainWindow", "CHA", 0));
+        professionBox2->setText(QApplication::translate("MainWindow", "Profession*", 0));
+        professionLabel2->setText(QApplication::translate("MainWindow", "WIS", 0));
+        climbBox->setText(QApplication::translate("MainWindow", "Climb", 0));
+        climbLabel->setText(QApplication::translate("MainWindow", "STR", 0));
+        performBox2->setText(QApplication::translate("MainWindow", "Perform", 0));
+        performLabel2->setText(QApplication::translate("MainWindow", "CHA", 0));
+        geographyBox->setText(QApplication::translate("MainWindow", "Knowledge (geography)*", 0));
+        geographyLabel->setText(QApplication::translate("MainWindow", "INT", 0));
+        craftBox3->setText(QApplication::translate("MainWindow", "Craft", 0));
+        craftLabel3->setText(QApplication::translate("MainWindow", "INT", 0));
+        engineeringBox->setText(QApplication::translate("MainWindow", "Knowledge (engineering)*", 0));
+        engineeringLabel->setText(QApplication::translate("MainWindow", "INT", 0));
+        historyBox->setText(QApplication::translate("MainWindow", "Knowledge (history)*", 0));
+        historyLabel->setText(QApplication::translate("MainWindow", "INT", 0));
+        craftBox2->setText(QApplication::translate("MainWindow", "Craft", 0));
+        craftLabel2->setText(QApplication::translate("MainWindow", "INT", 0));
+        rideBox->setText(QApplication::translate("MainWindow", "Ride", 0));
+        rideLabel->setText(QApplication::translate("MainWindow", "DEX", 0));
+        senseBox->setText(QApplication::translate("MainWindow", "Sense Motive", 0));
+        senseLabel->setText(QApplication::translate("MainWindow", "WIS", 0));
+        localBox->setText(QApplication::translate("MainWindow", "Knowledge (local)*", 0));
+        localLabel->setText(QApplication::translate("MainWindow", "INT", 0));
+        diplomacyBox->setText(QApplication::translate("MainWindow", "Diplomacy", 0));
+        diplomacyLabel->setText(QApplication::translate("MainWindow", "CHA", 0));
+        sleightBox->setText(QApplication::translate("MainWindow", "Sleight of Hand*", 0));
+        sleightLabel->setText(QApplication::translate("MainWindow", "DEX", 0));
+        disableBox->setText(QApplication::translate("MainWindow", "Disable Device*", 0));
+        disableLabel->setText(QApplication::translate("MainWindow", "DEX", 0));
+        natureBox->setText(QApplication::translate("MainWindow", "Knowledge (nature)*", 0));
+        natureLabel->setText(QApplication::translate("MainWindow", "INT", 0));
+        spellcraftBox->setText(QApplication::translate("MainWindow", "Spellcraft*", 0));
+        spellcraftLabel->setText(QApplication::translate("MainWindow", "INT", 0));
+        disguiseBox->setText(QApplication::translate("MainWindow", "Disguise", 0));
+        disguiseLabel->setText(QApplication::translate("MainWindow", "CHA", 0));
+        nobilityBox->setText(QApplication::translate("MainWindow", "Knowledge (nobility)*", 0));
+        nobilityLabel->setText(QApplication::translate("MainWindow", "INT", 0));
+        stealthBox->setText(QApplication::translate("MainWindow", "Stealth", 0));
+        stealthLabel->setText(QApplication::translate("MainWindow", "DEX", 0));
+        escapeBox->setText(QApplication::translate("MainWindow", "Escape Artist", 0));
+        escapeLabel->setText(QApplication::translate("MainWindow", "DEX", 0));
+        planesBox->setText(QApplication::translate("MainWindow", "Knoledge (planes)*", 0));
+        planesLabel->setText(QApplication::translate("MainWindow", "INT", 0));
+        survivalBox->setText(QApplication::translate("MainWindow", "Survival", 0));
+        survivalLabel->setText(QApplication::translate("MainWindow", "WIS", 0));
+        flyBox->setText(QApplication::translate("MainWindow", "Fly", 0));
+        flyLabel->setText(QApplication::translate("MainWindow", "DEX", 0));
+        religionBox->setText(QApplication::translate("MainWindow", "Knowledge (religion)*", 0));
+        religionLabel->setText(QApplication::translate("MainWindow", "INT", 0));
+        swimBox->setText(QApplication::translate("MainWindow", "Swim", 0));
+        swimLabel->setText(QApplication::translate("MainWindow", "STR", 0));
+        handleBox->setText(QApplication::translate("MainWindow", "Handle Animal*", 0));
+        handleLabel->setText(QApplication::translate("MainWindow", "CHA", 0));
+        linguisticsBox->setText(QApplication::translate("MainWindow", "Linguistics*", 0));
+        linguisticsLabel->setText(QApplication::translate("MainWindow", "INT", 0));
+        useBox->setText(QApplication::translate("MainWindow", "Use Magic Device", 0));
+        useLabel->setText(QApplication::translate("MainWindow", "CHA", 0));
+        acrobaticsBox->setText(QApplication::translate("MainWindow", "Acrobatics", 0));
+        acrobaticsLabel->setText(QApplication::translate("MainWindow", "DEX", 0));
+        perceptionBox->setText(QApplication::translate("MainWindow", "Perception", 0));
+        perceptionLabel->setText(QApplication::translate("MainWindow", "WIS", 0));
+        healBox->setText(QApplication::translate("MainWindow", "Heal", 0));
+        healLabel->setText(QApplication::translate("MainWindow", "WIS", 0));
+        appraiseBox->setText(QApplication::translate("MainWindow", "Appraise", 0));
+        appraiseLabel->setText(QApplication::translate("MainWindow", "INT", 0));
         label_51->setText(QString());
         label_52->setText(QString());
+        label_53->setText(QApplication::translate("MainWindow", "* trained only", 0));
+        checkBox->setText(QApplication::translate("MainWindow", "Class skill", 0));
+        label_2->setText(QApplication::translate("MainWindow", "Skill points available:", 0));
+        skillPointsAvailable->setText(QApplication::translate("MainWindow", "0", 0));
         nextButton_5->setText(QApplication::translate("MainWindow", "Next", 0));
         previousButton_5->setText(QApplication::translate("MainWindow", "Previous", 0));
-        nextButton_6->setText(QApplication::translate("MainWindow", "Next", 0));
+        label_16->setText(QApplication::translate("MainWindow", "Choose Feats", 0));
+        textBrowser->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\""
+                        " margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent"
+                        ":0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; marg"
+                        "in-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p s"
+                        "tyle=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block"
+                        "-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0p"
+                        "x; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+""
+                        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-b"
+                        "lock-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-botto"
+                        "m:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</"
+                        "p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px"
+                        "; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margi"
+                        "n-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p></body></html>", 0));
+        nextButton_6->setText(QApplication::translate("MainWindow", "Finish", 0));
         previousButton_6->setText(QApplication::translate("MainWindow", "Previous", 0));
+        label_4->setText(QApplication::translate("MainWindow", "Additional information", 0));
     } // retranslateUi
 
 };

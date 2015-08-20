@@ -137,6 +137,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Ability.cpp" />
+    <ClCompile Include="Class.cpp" />
     <ClCompile Include="Dice.cpp" />
     <ClCompile Include="GeneratedFiles\Debug\moc_mainwindow.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
@@ -152,6 +153,8 @@
     <ClCompile Include="MapTile.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Prop.cpp" />
+    <ClCompile Include="Race.cpp" />
+    <ClCompile Include="RaceProvider.cpp" />
     <ClCompile Include="Skill.cpp" />
     <ClCompile Include="Skills.cpp" />
     <ClCompile Include="StatBonus.cpp" />
@@ -209,6 +212,8 @@ endlocal
     <ClInclude Include="MaterialComponent.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="Prop.h" />
+    <ClInclude Include="Race.h" />
+    <ClInclude Include="RaceProvider.h" />
     <ClInclude Include="Sizes.h" />
     <ClInclude Include="Skill.h" />
     <ClInclude Include="Skills.h" />

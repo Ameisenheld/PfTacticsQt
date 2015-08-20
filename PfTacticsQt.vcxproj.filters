@@ -58,6 +58,12 @@
     <Filter Include="Source Files\GUI">
       <UniqueIdentifier>{846bfe0c-706d-4ac4-af5b-8f09446fff11}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Resources">
+      <UniqueIdentifier>{2a6e9112-5f8a-4cc3-8dcf-e13c5255f513}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Resources">
+      <UniqueIdentifier>{da0e8e85-47ce-43ce-adda-a0f18bd301a5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GeneratedFiles\Debug\moc_mainwindow.cpp">
@@ -107,6 +113,15 @@
     </ClCompile>
     <ClCompile Include="mainwindow.cpp">
       <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Race.cpp">
+      <Filter>Source Files\Property</Filter>
+    </ClCompile>
+    <ClCompile Include="RaceProvider.cpp">
+      <Filter>Source Files\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Class.cpp">
+      <Filter>Source Files\Classes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -198,6 +213,12 @@
     </ClInclude>
     <ClInclude Include="Spellbook.h">
       <Filter>Header Files\Property</Filter>
+    </ClInclude>
+    <ClInclude Include="Race.h">
+      <Filter>Header Files\Property</Filter>
+    </ClInclude>
+    <ClInclude Include="RaceProvider.h">
+      <Filter>Header Files\Resources</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
