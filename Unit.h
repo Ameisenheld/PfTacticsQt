@@ -30,6 +30,7 @@ public:
 	short damageBoni;
 	short ini;
 	short speed;
+	int hitDice;
 	Alignment alignment;
 	Skills* skills;
 	std::vector<Feat> feats;
@@ -37,6 +38,7 @@ public:
 	std::vector<Equipment> equipment;
 	Size size;
 	void updateStats();
+	virtual int getHitDice();
 };
 
 

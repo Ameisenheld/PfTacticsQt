@@ -18,6 +18,15 @@ Hero::~Hero(){		//TODO: make parent destructors virtual?
 	}
 }
 
+int Hero::getHitDice(){
+	int lvl = 0;
+	for (auto it = characterClasses.begin(); it != characterClasses.end(); ++it){
+		lvl += (*it)->lvl;
+	}
+	if (lvl > 0) return lvl;
+	else return 1;
+}
+
 void Hero::updateStats(){
 	Unit::updateStats();
 }
@@ -29,7 +38,7 @@ void Hero::levelUp(ClassName name){
 			return;
 		}
 	}
-	characterClasses.push_back(new Class(1,name));
+	characterClasses.push_back(new Class(1, name));
 }
 
 void Hero::setRace(Race* newRace){

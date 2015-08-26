@@ -220,5 +220,8 @@
     <ClInclude Include="RaceProvider.h">
       <Filter>Header Files\Resources</Filter>
     </ClInclude>
+    <ClInclude Include="GlobalMacros.h">
+      <Filter>Header Files\Resources</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

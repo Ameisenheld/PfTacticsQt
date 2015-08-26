@@ -205,6 +205,7 @@ endlocal
     <ClInclude Include="Feat.h" />
     <ClInclude Include="Furniture.h" />
     <ClInclude Include="GeneratedFiles\ui_mainwindow.h" />
+    <ClInclude Include="GlobalMacros.h" />
     <ClInclude Include="GraphicView.h" />
     <ClInclude Include="Hero.h" />
     <ClInclude Include="Map.h" />

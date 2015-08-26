@@ -5,6 +5,7 @@ Unit::Unit()
 	: Prop(){
 	ability = NULL;
 	skills = NULL;
+	hitDice = 1;
 }
 
 Unit::Unit(Ability* ab)
@@ -12,11 +13,16 @@ Unit::Unit(Ability* ab)
 
 	ability = ab;
 	skills = new Skills(ability);
+	hitDice = 1;
 }
 
 Unit::~Unit(){
 	//delete ability;		//TODO: is a problem cause ability might be zero??
 	//delete skills;
+}
+
+int Unit::getHitDice(){
+	return hitDice;
 }
 
 void Unit::updateStats(){

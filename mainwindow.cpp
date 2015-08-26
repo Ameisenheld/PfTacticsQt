@@ -1,6 +1,9 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+void skillChanged(bool, int, QLabel*, QLabel*, const char*, short);
+void updateAbilityScore(int, QLabel*, QLabel*);
+
 MainWindow::MainWindow(QWidget *parent) :
 QMainWindow(parent),
 ui(new Ui::MainWindow),
@@ -205,18 +208,19 @@ void MainWindow::on_nextButton_3_clicked()
 {
 	//save the class
 	ClassName name;
+	int skillPoints = 0;
 	switch (ui->classGroup->checkedId()){
-	case -2: name = Barbarian; break;
-	case -3: name = Bard; break;
-	case -4: name = Cleric; break;
-	case -5: name = Druid; break;
-	case -6: name = Fighter; break;
-	case -7: name = Monk; break;
-	case -8: name = Paladin; break;
-	case -9: name = Ranger; break;
-	case -10: name = Rogue; break;
-	case -11: name = Sorcerer; break;
-	case -12: name = Wizard; break;
+	case -2: name = Barbarian; skillPoints = 4; break;
+	case -3: name = Bard; skillPoints = 6; break;
+	case -4: name = Cleric; skillPoints = 2; break;
+	case -5: name = Druid; skillPoints = 4; break;
+	case -6: name = Fighter; skillPoints = 2; break;
+	case -7: name = Monk; skillPoints = 4; break;
+	case -8: name = Paladin; skillPoints = 2; break;
+	case -9: name = Ranger; skillPoints = 6; break;
+	case -10: name = Rogue; skillPoints = 8; break;
+	case -11: name = Sorcerer; skillPoints = 2; break;
+	case -12: name = Wizard; skillPoints = 2; break;
 	default: name = Barbarian; break;
 	}
 	character->levelUp(name);
@@ -261,6 +265,49 @@ void MainWindow::on_nextButton_3_clicked()
 	ui->survivalBox->setChecked(character->skills->survival->classSkill);
 	ui->swimBox->setChecked(character->skills->swim->classSkill);
 	ui->useBox->setChecked(character->skills->useMagicDevice->classSkill);
+	//make sure the maximum rank is set
+	int hd = character->getHitDice();
+	ui->acrobaticsValue->setMaximum(hd);
+	ui->appraiseValue->setMaximum(hd);
+	ui->bluffValue->setMaximum(hd);
+	ui->climbValue->setMaximum(hd);
+	ui->craftValue1->setMaximum(hd);
+	ui->craftValue2->setMaximum(hd);
+	ui->craftValue3->setMaximum(hd);
+	ui->diplomacyValue->setMaximum(hd);
+	ui->disableValue->setMaximum(hd);
+	ui->disguiseValue->setMaximum(hd);
+	ui->escapeValue->setMaximum(hd);
+	ui->flyValue->setMaximum(hd);
+	ui->handleValue->setMaximum(hd);
+	ui->healValue->setMaximum(hd);
+	ui->intimidateValue->setMaximum(hd);
+	ui->arcanaValue->setMaximum(hd);
+	ui->dungeoneeringValue->setMaximum(hd);
+	ui->engineeringValue->setMaximum(hd);
+	ui->geographyValue->setMaximum(hd);
+	ui->historyValue->setMaximum(hd);
+	ui->localValue->setMaximum(hd);
+	ui->natureValue->setMaximum(hd);
+	ui->nobilityValue->setMaximum(hd);
+	ui->planesValue->setMaximum(hd);
+	ui->religionValue->setMaximum(hd);
+	ui->linguisticsValue->setMaximum(hd);
+	ui->perceptionValue->setMaximum(hd);
+	ui->performValue1->setMaximum(hd);
+	ui->performValue2->setMaximum(hd);
+	ui->professionValue1->setMaximum(hd);
+	ui->professionValue2->setMaximum(hd);
+	ui->rideValue->setMaximum(hd);
+	ui->senseValue->setMaximum(hd);
+	ui->sleightValue->setMaximum(hd);
+	ui->spellcraftValue->setMaximum(hd);
+	ui->stealthValue->setMaximum(hd);
+	ui->survivalValue->setMaximum(hd);
+	ui->swimValue->setMaximum(hd);
+	ui->useValue->setMaximum(hd);
+	//show how many Skill points are available
+	ui->skillPointsAvailable->setText(QString::number(skillPoints+*character->ability->intMod));
 	nextPage();
 }
 
@@ -310,197 +357,206 @@ void MainWindow::on_previousButton_6_clicked()
 	prevPage();
 }
 
+void skillChanged(bool classSkill, int value, QLabel* totalLabel, QLabel* label, const char* abilityScore, short abilityBonus){
+	int bonus = 0;
+	if (classSkill) bonus = 3;
+	bonus += abilityBonus;
+	if (value == 0) label->setText(abilityScore);
+	else label->setText(QString::number(value + bonus));
+}
+
 void MainWindow::on_craftValue3_valueChanged(int arg1)
 {
-
+	skillChanged(ui->craftBox3->isChecked(), arg1, ui->skillPointsAvailable, ui->craftLabel3, intString, *character->ability->intMod);
+	
 }
 
 void MainWindow::on_craftValue2_valueChanged(int arg1)
 {
-
+	skillChanged(ui->craftBox2->isChecked(), arg1, ui->skillPointsAvailable, ui->craftLabel2, intString, *character->ability->intMod);
 }
 
 void MainWindow::on_craftValue1_valueChanged(int arg1)
 {
-
+	skillChanged(ui->craftBox1->isChecked(), arg1, ui->skillPointsAvailable, ui->craftLabel1, intString, *character->ability->intMod);
 }
 
 void MainWindow::on_climbValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->climbBox->isChecked(), arg1, ui->skillPointsAvailable, ui->climbLabel, strString, *character->ability->strMod);
 }
 
 void MainWindow::on_bluffValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->bluffBox->isChecked(), arg1, ui->skillPointsAvailable, ui->bluffLabel, chaString, *character->ability->chaMod);
 }
 
 void MainWindow::on_appraiseValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->appraiseBox->isChecked(), arg1, ui->skillPointsAvailable, ui->appraiseLabel, intString, *character->ability->intMod);
 }
 
 void MainWindow::on_acrobaticsValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->acrobaticsBox->isChecked(), arg1, ui->skillPointsAvailable, ui->acrobaticsLabel, dexString, *character->ability->dexMod);
 }
 
 void MainWindow::on_diplomacyValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->diplomacyBox->isChecked(), arg1, ui->skillPointsAvailable, ui->diplomacyLabel, chaString, *character->ability->chaMod);
 }
 
 void MainWindow::on_disableValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->disableBox->isChecked(), arg1, ui->skillPointsAvailable, ui->disableLabel, dexString, *character->ability->dexMod);
 }
 
 void MainWindow::on_disguiseValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->disguiseBox->isChecked(), arg1, ui->skillPointsAvailable, ui->disguiseLabel, chaString, *character->ability->chaMod);
 }
 
 void MainWindow::on_escapeValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->escapeBox->isChecked(), arg1, ui->skillPointsAvailable, ui->escapeLabel, dexString, *character->ability->dexMod);
 }
 
 void MainWindow::on_flyValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->flyBox->isChecked(), arg1, ui->skillPointsAvailable, ui->flyLabel, dexString, *character->ability->dexMod);
 }
 
 void MainWindow::on_handleValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->handleBox->isChecked(), arg1, ui->skillPointsAvailable, ui->handleLabel, chaString, *character->ability->chaMod);
 }
 
 void MainWindow::on_healValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->healBox->isChecked(), arg1, ui->skillPointsAvailable, ui->healLabel, wisString, *character->ability->wisMod);
 }
 
 void MainWindow::on_intimidateValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->intimidateBox->isChecked(), arg1, ui->skillPointsAvailable, ui->intimidateLabel, chaString, *character->ability->chaMod);
 }
 
 void MainWindow::on_arcanaValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->arcanaBox->isChecked(), arg1, ui->skillPointsAvailable, ui->arcanaLabel, intString, *character->ability->intMod);
 }
 
 void MainWindow::on_dungeoneeringValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->dungeoneeringBox->isChecked(), arg1, ui->skillPointsAvailable, ui->dungeoneeringLabel, intString, *character->ability->intMod);
 }
 
 void MainWindow::on_engineeringValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->engineeringBox->isChecked(), arg1, ui->skillPointsAvailable, ui->engineeringLabel, intString, *character->ability->intMod);
 }
 
 void MainWindow::on_geographyValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->geographyBox->isChecked(), arg1, ui->skillPointsAvailable, ui->geographyLabel, intString, *character->ability->intMod);
 }
 
 void MainWindow::on_historyValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->historyBox->isChecked(), arg1, ui->skillPointsAvailable, ui->historyLabel, intString, *character->ability->intMod);
 }
 
 void MainWindow::on_localValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->localBox->isChecked(), arg1, ui->skillPointsAvailable, ui->localLabel, intString, *character->ability->intMod);
 }
 
 void MainWindow::on_natureValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->natureBox->isChecked(), arg1, ui->skillPointsAvailable, ui->natureLabel, intString, *character->ability->intMod);
 }
 
 void MainWindow::on_nobilityValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->nobilityBox->isChecked(), arg1, ui->skillPointsAvailable, ui->nobilityLabel, intString, *character->ability->intMod);
 }
 
 void MainWindow::on_planesValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->planesBox->isChecked(), arg1, ui->skillPointsAvailable, ui->planesLabel, intString, *character->ability->intMod);
 }
 
 void MainWindow::on_religionValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->religionBox->isChecked(), arg1, ui->skillPointsAvailable, ui->religionLabel, intString, *character->ability->intMod);
 }
 
 void MainWindow::on_linguisticsValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->linguisticsBox->isChecked(), arg1, ui->skillPointsAvailable, ui->linguisticsLabel, intString, *character->ability->intMod);
 }
 
 void MainWindow::on_perceptionValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->perceptionBox->isChecked(), arg1, ui->skillPointsAvailable, ui->perceptionLabel, wisString, *character->ability->wisMod);
 }
 
 void MainWindow::on_performValue1_valueChanged(int arg1)
 {
-
+	skillChanged(ui->performBox1->isChecked(), arg1, ui->skillPointsAvailable, ui->performLabel1, chaString, *character->ability->chaMod);
 }
 
 void MainWindow::on_performValue2_valueChanged(int arg1)
 {
-
+	skillChanged(ui->performBox2->isChecked(), arg1, ui->skillPointsAvailable, ui->performLabel2, chaString, *character->ability->chaMod);
 }
 
 void MainWindow::on_professionValue1_valueChanged(int arg1)
 {
-
+	skillChanged(ui->professionBox1->isChecked(), arg1, ui->skillPointsAvailable, ui->professionLabel1, wisString, *character->ability->wisMod);
 }
 
 void MainWindow::on_professionValue2_valueChanged(int arg1)
 {
-
+	skillChanged(ui->professionBox2->isChecked(), arg1, ui->skillPointsAvailable, ui->professionLabel2, wisString, *character->ability->wisMod);
 }
 
 void MainWindow::on_rideValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->rideBox->isChecked(), arg1, ui->skillPointsAvailable, ui->rideLabel, dexString, *character->ability->dexMod);
 }
 
 void MainWindow::on_senseValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->senseBox->isChecked(), arg1, ui->skillPointsAvailable, ui->senseLabel, wisString, *character->ability->wisMod);
 }
 
 void MainWindow::on_sleightValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->sleightBox->isChecked(), arg1, ui->skillPointsAvailable, ui->sleightLabel, dexString, *character->ability->dexMod);
 }
 
 void MainWindow::on_spellcraftValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->spellcraftBox->isChecked(), arg1, ui->skillPointsAvailable, ui->spellcraftLabel, intString, *character->ability->intMod);
 }
 
 void MainWindow::on_stealthValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->stealthBox->isChecked(), arg1, ui->skillPointsAvailable, ui->stealthLabel, dexString, *character->ability->dexMod);
 }
 
 void MainWindow::on_survivalValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->survivalBox->isChecked(), arg1, ui->skillPointsAvailable, ui->survivalLabel, wisString, *character->ability->wisMod);
 }
 
 void MainWindow::on_swimValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->swimBox->isChecked(), arg1, ui->skillPointsAvailable, ui->swimLabel, strString, *character->ability->strMod);
 }
 
 void MainWindow::on_useValue_valueChanged(int arg1)
 {
-
+	skillChanged(ui->useBox->isChecked(), arg1, ui->skillPointsAvailable, ui->useLabel, chaString, *character->ability->chaMod);
 }

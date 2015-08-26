@@ -17,6 +17,7 @@ public:
 	void levelUp(ClassName);
 	void updateStats();
 	void setRace(Race*);
+	int getHitDice();
 private:
 	Race* race;
 	std::vector<Class*> characterClasses;	//a character may have any number of classLevels
