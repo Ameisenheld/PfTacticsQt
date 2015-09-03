@@ -28,6 +28,11 @@ private slots:
     void on_wisBox_2_valueChanged(int arg1);
     void on_chaBox_2_valueChanged(int arg1);
 
+	void newFile();
+	void save();
+	void saveAs();
+	void open();
+	void help();
 
     void on_rollDiceButton_clicked();
     void on_nextButton_clicked();
@@ -84,6 +89,8 @@ private slots:
     void on_survivalValue_valueChanged(int arg1);
     void on_swimValue_valueChanged(int arg1);
     void on_useValue_valueChanged(int arg1);
+
+    void on_nameValue_textChanged(const QString &arg1);
 
 private:
     Ui::MainWindow *ui;

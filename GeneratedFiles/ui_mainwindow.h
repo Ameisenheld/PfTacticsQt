@@ -21,9 +21,11 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QStatusBar>
@@ -37,6 +39,11 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
+    QAction *actionSave;
+    QAction *actionOpen;
+    QAction *actionSave_as;
+    QAction *actionHelp;
+    QAction *actionNew;
     QWidget *centralWidget;
     QStackedWidget *creationStack;
     QWidget *page;
@@ -297,17 +304,40 @@ public:
     QPushButton *nextButton_6;
     QPushButton *previousButton_6;
     QLabel *label_4;
+    QWidget *gridLayoutWidget_4;
+    QGridLayout *gridLayout;
+    QComboBox *alignmentValue;
+    QLabel *genderLabel;
+    QLineEdit *nameValue;
+    QLabel *nameLabel;
+    QLabel *alignmentLabel;
+    QComboBox *genderValue;
+    QComboBox *hairValue;
+    QLabel *hairLabel;
+    QSpacerItem *horizontalSpacer;
     QMenuBar *menuBar;
+    QMenu *menuFile;
+    QMenu *menuHelp;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
-    QButtonGroup *classGroup;
     QButtonGroup *raceGroup;
+    QButtonGroup *classGroup;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
         MainWindow->resize(890, 515);
+        actionSave = new QAction(MainWindow);
+        actionSave->setObjectName(QStringLiteral("actionSave"));
+        actionOpen = new QAction(MainWindow);
+        actionOpen->setObjectName(QStringLiteral("actionOpen"));
+        actionSave_as = new QAction(MainWindow);
+        actionSave_as->setObjectName(QStringLiteral("actionSave_as"));
+        actionHelp = new QAction(MainWindow);
+        actionHelp->setObjectName(QStringLiteral("actionHelp"));
+        actionNew = new QAction(MainWindow);
+        actionNew->setObjectName(QStringLiteral("actionNew"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         creationStack = new QStackedWidget(centralWidget);
@@ -665,6 +695,7 @@ public:
         page_4->setObjectName(QStringLiteral("page_4"));
         nextButton_4 = new QPushButton(page_4);
         nextButton_4->setObjectName(QStringLiteral("nextButton_4"));
+        nextButton_4->setEnabled(false);
         nextButton_4->setGeometry(QRect(770, 420, 80, 23));
         previousButton_4 = new QPushButton(page_4);
         previousButton_4->setObjectName(QStringLiteral("previousButton_4"));
@@ -2935,11 +2966,71 @@ public:
         label_4 = new QLabel(page_6);
         label_4->setObjectName(QStringLiteral("label_4"));
         label_4->setGeometry(QRect(20, 20, 121, 21));
+        gridLayoutWidget_4 = new QWidget(page_6);
+        gridLayoutWidget_4->setObjectName(QStringLiteral("gridLayoutWidget_4"));
+        gridLayoutWidget_4->setGeometry(QRect(220, 20, 631, 381));
+        gridLayout = new QGridLayout(gridLayoutWidget_4);
+        gridLayout->setSpacing(6);
+        gridLayout->setContentsMargins(11, 11, 11, 11);
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        gridLayout->setContentsMargins(0, 0, 0, 0);
+        alignmentValue = new QComboBox(gridLayoutWidget_4);
+        alignmentValue->setObjectName(QStringLiteral("alignmentValue"));
+        QFont font2;
+        font2.setItalic(false);
+        alignmentValue->setFont(font2);
+        alignmentValue->setLayoutDirection(Qt::LeftToRight);
+
+        gridLayout->addWidget(alignmentValue, 1, 2, 1, 1);
+
+        genderLabel = new QLabel(gridLayoutWidget_4);
+        genderLabel->setObjectName(QStringLiteral("genderLabel"));
+
+        gridLayout->addWidget(genderLabel, 2, 0, 1, 1);
+
+        nameValue = new QLineEdit(gridLayoutWidget_4);
+        nameValue->setObjectName(QStringLiteral("nameValue"));
+
+        gridLayout->addWidget(nameValue, 0, 2, 1, 1);
+
+        nameLabel = new QLabel(gridLayoutWidget_4);
+        nameLabel->setObjectName(QStringLiteral("nameLabel"));
+
+        gridLayout->addWidget(nameLabel, 0, 0, 1, 1);
+
+        alignmentLabel = new QLabel(gridLayoutWidget_4);
+        alignmentLabel->setObjectName(QStringLiteral("alignmentLabel"));
+
+        gridLayout->addWidget(alignmentLabel, 1, 0, 1, 1);
+
+        genderValue = new QComboBox(gridLayoutWidget_4);
+        genderValue->setObjectName(QStringLiteral("genderValue"));
+
+        gridLayout->addWidget(genderValue, 2, 2, 1, 1);
+
+        hairValue = new QComboBox(gridLayoutWidget_4);
+        hairValue->setObjectName(QStringLiteral("hairValue"));
+
+        gridLayout->addWidget(hairValue, 3, 2, 1, 1);
+
+        hairLabel = new QLabel(gridLayoutWidget_4);
+        hairLabel->setObjectName(QStringLiteral("hairLabel"));
+
+        gridLayout->addWidget(hairLabel, 3, 0, 1, 1);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer, 0, 1, 1, 1);
+
         creationStack->addWidget(page_6);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 890, 21));
+        menuFile = new QMenu(menuBar);
+        menuFile->setObjectName(QStringLiteral("menuFile"));
+        menuHelp = new QMenu(menuBar);
+        menuHelp->setObjectName(QStringLiteral("menuHelp"));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -2948,9 +3039,17 @@ public:
         statusBar->setObjectName(QStringLiteral("statusBar"));
         MainWindow->setStatusBar(statusBar);
 
+        menuBar->addAction(menuFile->menuAction());
+        menuBar->addAction(menuHelp->menuAction());
+        menuFile->addAction(actionNew);
+        menuFile->addAction(actionSave);
+        menuFile->addAction(actionSave_as);
+        menuFile->addAction(actionOpen);
+        menuHelp->addAction(actionHelp);
+
         retranslateUi(MainWindow);
 
-        creationStack->setCurrentIndex(3);
+        creationStack->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -2959,6 +3058,11 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
+        actionSave->setText(QApplication::translate("MainWindow", "Save", 0));
+        actionOpen->setText(QApplication::translate("MainWindow", "Open", 0));
+        actionSave_as->setText(QApplication::translate("MainWindow", "Save as ...", 0));
+        actionHelp->setText(QApplication::translate("MainWindow", "Help", 0));
+        actionNew->setText(QApplication::translate("MainWindow", "New", 0));
         pointsLeftLabel_2->setText(QApplication::translate("MainWindow", "Points left:", 0));
         intPointsNext_2->setText(QApplication::translate("MainWindow", "1", 0));
         wisPointsNext_2->setText(QApplication::translate("MainWindow", "1", 0));
@@ -3023,83 +3127,83 @@ public:
         previousButton_4->setText(QApplication::translate("MainWindow", "Previous", 0));
         label_15->setText(QApplication::translate("MainWindow", "Pick your Skills", 0));
         intimidateBox->setText(QApplication::translate("MainWindow", "Intimidate", 0));
-        intimidateLabel->setText(QApplication::translate("MainWindow", chaString, 0));
+        intimidateLabel->setText(QApplication::translate("MainWindow", "CHA", 0));
         arcanaBox->setText(QApplication::translate("MainWindow", "Knowledge (arcana)*", 0));
-        arcanaLabel->setText(QApplication::translate("MainWindow", intString, 0));
+        arcanaLabel->setText(QApplication::translate("MainWindow", "INT", 0));
         performBox1->setText(QApplication::translate("MainWindow", "Perform", 0));
-        performLabel1->setText(QApplication::translate("MainWindow", chaString, 0));
+        performLabel1->setText(QApplication::translate("MainWindow", "CHA", 0));
         dungeoneeringBox->setText(QApplication::translate("MainWindow", "Knowledge (dungeoneering)*", 0));
-        dungeoneeringLabel->setText(QApplication::translate("MainWindow", intString, 0));
+        dungeoneeringLabel->setText(QApplication::translate("MainWindow", "INT", 0));
         professionBox1->setText(QApplication::translate("MainWindow", "Profession*", 0));
-        professionLabel1->setText(QApplication::translate("MainWindow", wisString, 0));
+        professionLabel1->setText(QApplication::translate("MainWindow", "WIS", 0));
         craftBox1->setText(QApplication::translate("MainWindow", "Craft", 0));
-        craftLabel1->setText(QApplication::translate("MainWindow", intString, 0));
+        craftLabel1->setText(QApplication::translate("MainWindow", "INT", 0));
         bluffBox->setText(QApplication::translate("MainWindow", "Bluff", 0));
-        bluffLabel->setText(QApplication::translate("MainWindow", chaString, 0));
+        bluffLabel->setText(QApplication::translate("MainWindow", "CHA", 0));
         professionBox2->setText(QApplication::translate("MainWindow", "Profession*", 0));
-        professionLabel2->setText(QApplication::translate("MainWindow", wisString, 0));
+        professionLabel2->setText(QApplication::translate("MainWindow", "WIS", 0));
         climbBox->setText(QApplication::translate("MainWindow", "Climb", 0));
-        climbLabel->setText(QApplication::translate("MainWindow", strString, 0));
+        climbLabel->setText(QApplication::translate("MainWindow", "STR", 0));
         performBox2->setText(QApplication::translate("MainWindow", "Perform", 0));
-        performLabel2->setText(QApplication::translate("MainWindow", chaString, 0));
+        performLabel2->setText(QApplication::translate("MainWindow", "CHA", 0));
         geographyBox->setText(QApplication::translate("MainWindow", "Knowledge (geography)*", 0));
-        geographyLabel->setText(QApplication::translate("MainWindow", intString, 0));
+        geographyLabel->setText(QApplication::translate("MainWindow", "INT", 0));
         craftBox3->setText(QApplication::translate("MainWindow", "Craft", 0));
-        craftLabel3->setText(QApplication::translate("MainWindow", intString, 0));
+        craftLabel3->setText(QApplication::translate("MainWindow", "INT", 0));
         engineeringBox->setText(QApplication::translate("MainWindow", "Knowledge (engineering)*", 0));
-        engineeringLabel->setText(QApplication::translate("MainWindow", intString, 0));
+        engineeringLabel->setText(QApplication::translate("MainWindow", "INT", 0));
         historyBox->setText(QApplication::translate("MainWindow", "Knowledge (history)*", 0));
-        historyLabel->setText(QApplication::translate("MainWindow", intString, 0));
+        historyLabel->setText(QApplication::translate("MainWindow", "INT", 0));
         craftBox2->setText(QApplication::translate("MainWindow", "Craft", 0));
-        craftLabel2->setText(QApplication::translate("MainWindow", intString, 0));
+        craftLabel2->setText(QApplication::translate("MainWindow", "INT", 0));
         rideBox->setText(QApplication::translate("MainWindow", "Ride", 0));
-        rideLabel->setText(QApplication::translate("MainWindow", dexString, 0));
+        rideLabel->setText(QApplication::translate("MainWindow", "DEX", 0));
         senseBox->setText(QApplication::translate("MainWindow", "Sense Motive", 0));
-        senseLabel->setText(QApplication::translate("MainWindow", wisString, 0));
+        senseLabel->setText(QApplication::translate("MainWindow", "WIS", 0));
         localBox->setText(QApplication::translate("MainWindow", "Knowledge (local)*", 0));
-        localLabel->setText(QApplication::translate("MainWindow", intString, 0));
+        localLabel->setText(QApplication::translate("MainWindow", "INT", 0));
         diplomacyBox->setText(QApplication::translate("MainWindow", "Diplomacy", 0));
-        diplomacyLabel->setText(QApplication::translate("MainWindow", chaString, 0));
+        diplomacyLabel->setText(QApplication::translate("MainWindow", "CHA", 0));
         sleightBox->setText(QApplication::translate("MainWindow", "Sleight of Hand*", 0));
-        sleightLabel->setText(QApplication::translate("MainWindow", dexString, 0));
+        sleightLabel->setText(QApplication::translate("MainWindow", "DEX", 0));
         disableBox->setText(QApplication::translate("MainWindow", "Disable Device*", 0));
-        disableLabel->setText(QApplication::translate("MainWindow", dexString, 0));
+        disableLabel->setText(QApplication::translate("MainWindow", "DEX", 0));
         natureBox->setText(QApplication::translate("MainWindow", "Knowledge (nature)*", 0));
-        natureLabel->setText(QApplication::translate("MainWindow", intString, 0));
+        natureLabel->setText(QApplication::translate("MainWindow", "INT", 0));
         spellcraftBox->setText(QApplication::translate("MainWindow", "Spellcraft*", 0));
-        spellcraftLabel->setText(QApplication::translate("MainWindow", intString, 0));
+        spellcraftLabel->setText(QApplication::translate("MainWindow", "INT", 0));
         disguiseBox->setText(QApplication::translate("MainWindow", "Disguise", 0));
-        disguiseLabel->setText(QApplication::translate("MainWindow", chaString, 0));
+        disguiseLabel->setText(QApplication::translate("MainWindow", "CHA", 0));
         nobilityBox->setText(QApplication::translate("MainWindow", "Knowledge (nobility)*", 0));
-        nobilityLabel->setText(QApplication::translate("MainWindow", intString, 0));
+        nobilityLabel->setText(QApplication::translate("MainWindow", "INT", 0));
         stealthBox->setText(QApplication::translate("MainWindow", "Stealth", 0));
-        stealthLabel->setText(QApplication::translate("MainWindow", dexString, 0));
+        stealthLabel->setText(QApplication::translate("MainWindow", "DEX", 0));
         escapeBox->setText(QApplication::translate("MainWindow", "Escape Artist", 0));
-        escapeLabel->setText(QApplication::translate("MainWindow", dexString, 0));
+        escapeLabel->setText(QApplication::translate("MainWindow", "DEX", 0));
         planesBox->setText(QApplication::translate("MainWindow", "Knoledge (planes)*", 0));
-        planesLabel->setText(QApplication::translate("MainWindow", intString, 0));
+        planesLabel->setText(QApplication::translate("MainWindow", "INT", 0));
         survivalBox->setText(QApplication::translate("MainWindow", "Survival", 0));
-        survivalLabel->setText(QApplication::translate("MainWindow", wisString, 0));
+        survivalLabel->setText(QApplication::translate("MainWindow", "WIS", 0));
         flyBox->setText(QApplication::translate("MainWindow", "Fly", 0));
-        flyLabel->setText(QApplication::translate("MainWindow", dexString, 0));
+        flyLabel->setText(QApplication::translate("MainWindow", "DEX", 0));
         religionBox->setText(QApplication::translate("MainWindow", "Knowledge (religion)*", 0));
-        religionLabel->setText(QApplication::translate("MainWindow", intString, 0));
+        religionLabel->setText(QApplication::translate("MainWindow", "INT", 0));
         swimBox->setText(QApplication::translate("MainWindow", "Swim", 0));
-        swimLabel->setText(QApplication::translate("MainWindow", strString, 0));
+        swimLabel->setText(QApplication::translate("MainWindow", "STR", 0));
         handleBox->setText(QApplication::translate("MainWindow", "Handle Animal*", 0));
-        handleLabel->setText(QApplication::translate("MainWindow", chaString, 0));
+        handleLabel->setText(QApplication::translate("MainWindow", "CHA", 0));
         linguisticsBox->setText(QApplication::translate("MainWindow", "Linguistics*", 0));
-        linguisticsLabel->setText(QApplication::translate("MainWindow", intString, 0));
+        linguisticsLabel->setText(QApplication::translate("MainWindow", "INT", 0));
         useBox->setText(QApplication::translate("MainWindow", "Use Magic Device", 0));
-        useLabel->setText(QApplication::translate("MainWindow", chaString, 0));
+        useLabel->setText(QApplication::translate("MainWindow", "CHA", 0));
         acrobaticsBox->setText(QApplication::translate("MainWindow", "Acrobatics", 0));
-        acrobaticsLabel->setText(QApplication::translate("MainWindow", dexString, 0));
+        acrobaticsLabel->setText(QApplication::translate("MainWindow", "DEX", 0));
         perceptionBox->setText(QApplication::translate("MainWindow", "Perception", 0));
-        perceptionLabel->setText(QApplication::translate("MainWindow", wisString, 0));
+        perceptionLabel->setText(QApplication::translate("MainWindow", "WIS", 0));
         healBox->setText(QApplication::translate("MainWindow", "Heal", 0));
-        healLabel->setText(QApplication::translate("MainWindow", wisString, 0));
+        healLabel->setText(QApplication::translate("MainWindow", "WIS", 0));
         appraiseBox->setText(QApplication::translate("MainWindow", "Appraise", 0));
-        appraiseLabel->setText(QApplication::translate("MainWindow", intString, 0));
+        appraiseLabel->setText(QApplication::translate("MainWindow", "INT", 0));
         label_51->setText(QString());
         label_52->setText(QString());
         label_53->setText(QApplication::translate("MainWindow", "* trained only", 0));
@@ -3221,9 +3325,44 @@ public:
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Test</p></body></html>", 0));
-        nextButton_6->setText(QApplication::translate("MainWindow", "Finish", 0));
+        nextButton_6->setText(QApplication::translate("MainWindow", "Save", 0));
         previousButton_6->setText(QApplication::translate("MainWindow", "Previous", 0));
         label_4->setText(QApplication::translate("MainWindow", "Additional information", 0));
+        alignmentValue->clear();
+        alignmentValue->insertItems(0, QStringList()
+         << QApplication::translate("MainWindow", "Lawful good", 0)
+         << QApplication::translate("MainWindow", "Neutral good", 0)
+         << QApplication::translate("MainWindow", "Chaotic good", 0)
+         << QApplication::translate("MainWindow", "Lawful neutral", 0)
+         << QApplication::translate("MainWindow", "Neutral", 0)
+         << QApplication::translate("MainWindow", "Chaotic neutral", 0)
+         << QApplication::translate("MainWindow", "Lawful evil", 0)
+         << QApplication::translate("MainWindow", "Neutral evil", 0)
+         << QApplication::translate("MainWindow", "Chaotic evil", 0)
+        );
+        genderLabel->setText(QApplication::translate("MainWindow", "Gender:", 0));
+        nameLabel->setText(QApplication::translate("MainWindow", "Name:", 0));
+        alignmentLabel->setText(QApplication::translate("MainWindow", "Alignment:", 0));
+        genderValue->clear();
+        genderValue->insertItems(0, QStringList()
+         << QApplication::translate("MainWindow", "\342\231\202 (male)", 0)
+         << QApplication::translate("MainWindow", "\342\231\200 (female)", 0)
+        );
+        hairValue->clear();
+        hairValue->insertItems(0, QStringList()
+         << QApplication::translate("MainWindow", "Blond", 0)
+         << QApplication::translate("MainWindow", "Light brown", 0)
+         << QApplication::translate("MainWindow", "Dark brown", 0)
+         << QApplication::translate("MainWindow", "Black", 0)
+         << QApplication::translate("MainWindow", "Red", 0)
+         << QApplication::translate("MainWindow", "Blue", 0)
+         << QApplication::translate("MainWindow", "Purple", 0)
+         << QApplication::translate("MainWindow", "Green", 0)
+         << QApplication::translate("MainWindow", "Bald", 0)
+        );
+        hairLabel->setText(QApplication::translate("MainWindow", "Hair color", 0));
+        menuFile->setTitle(QApplication::translate("MainWindow", "File", 0));
+        menuHelp->setTitle(QApplication::translate("MainWindow", "Help!", 0));
     } // retranslateUi
 
 };

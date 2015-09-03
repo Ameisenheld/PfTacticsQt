@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QWidget" name="gridLayoutWidget">
@@ -659,6 +659,9 @@
     </widget>
     <widget class="QWidget" name="page_4">
      <widget class="QPushButton" name="nextButton_4">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
       <property name="geometry">
        <rect>
         <x>770</x>
@@ -12434,7 +12437,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="text">
-       <string>Finish</string>
+       <string>Save</string>
       </property>
      </widget>
      <widget class="QPushButton" name="previousButton_6">
@@ -12463,6 +12466,185 @@ p, li { white-space: pre-wrap; }
        <string>Additional information</string>
       </property>
      </widget>
+     <widget class="QWidget" name="gridLayoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>20</y>
+        <width>631</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="1" column="2">
+        <widget class="QComboBox" name="alignmentValue">
+         <property name="font">
+          <font>
+           <italic>false</italic>
+          </font>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <item>
+          <property name="text">
+           <string>Lawful good</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Neutral good</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Chaotic good</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Lawful neutral</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Neutral</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Chaotic neutral</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Lawful evil</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Neutral evil</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Chaotic evil</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="genderLabel">
+         <property name="text">
+          <string>Gender:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLineEdit" name="nameValue"/>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="nameLabel">
+         <property name="text">
+          <string>Name:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="alignmentLabel">
+         <property name="text">
+          <string>Alignment:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QComboBox" name="genderValue">
+         <item>
+          <property name="text">
+           <string>♂ (male)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>♀ (female)</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QComboBox" name="hairValue">
+         <item>
+          <property name="text">
+           <string>Blond</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Light brown</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Dark brown</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Black</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Red</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Blue</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Purple</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Green</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Bald</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="hairLabel">
+         <property name="text">
+          <string>Hair color</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </widget>
   </widget>
@@ -12475,6 +12657,23 @@ p, li { white-space: pre-wrap; }
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSave_as"/>
+    <addaction name="actionOpen"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help!</string>
+    </property>
+    <addaction name="actionHelp"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuHelp"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -12485,12 +12684,37 @@ p, li { white-space: pre-wrap; }
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave_as">
+   <property name="text">
+    <string>Save as ...</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="classGroup"/>
   <buttongroup name="raceGroup"/>
+  <buttongroup name="classGroup"/>
  </buttongroups>
 </ui>

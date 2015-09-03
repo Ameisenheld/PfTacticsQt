@@ -8,4 +8,6 @@
 #define wisString "WIS"
 #define chaString "CHA"
 
+#define CHARACTER_CREATION_PAGES 6
+
 #endif  //GLOBALMACROS_H
