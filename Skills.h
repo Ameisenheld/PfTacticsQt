@@ -49,6 +49,10 @@ public:
 	Skill* useMagicDevice;
 	void setClassSkills(ClassName);
 	void setSkillBonus(StatBonus*);
+	friend std::ostream& operator<<(std::ostream& os, const Skills& s);
+	friend std::istream& operator>>(std::istream& is, Skills& s);
+private:
+	Ability* ability;
 };
 
 #endif

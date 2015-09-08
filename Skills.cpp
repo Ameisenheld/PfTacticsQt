@@ -37,6 +37,7 @@ Skills::Skills(Ability* ability){
 	survival = new Skill(ability->wisMod, false);
 	swim = new Skill(ability->strMod, false);
 	useMagicDevice = new Skill(ability->chaMod, true);
+	this->ability = ability;
 }
 
 Skills::~Skills(){
@@ -75,6 +76,7 @@ Skills::~Skills(){
 	delete survival;
 	delete swim;
 	delete useMagicDevice;
+	//dont delete ability scores
 }
 
 void Skills::setSkillBonus(StatBonus* bonus){
@@ -279,4 +281,152 @@ void Skills::setClassSkills(ClassName name){
 		profession->classSkill =
 		spellcraft->classSkill = true; break;
 	}
+}
+
+std::ostream& operator<<(std::ostream& os, const Skills& s){
+	os << *s.acrobatics << '\n';
+	os << *s.appraise << '\n';
+	os << *s.bluff << '\n';
+	os << *s.climb << '\n';
+	os << *s.craft << '\n';
+	os << *s.diplomacy << '\n';
+	os << *s.disableDevice << '\n';
+	os << *s.disguise << '\n';
+	os << *s.escapeArtist << '\n';
+	os << *s.fly << '\n';
+	os << *s.handleAnimal << '\n';
+	os << *s.heal << '\n';
+	os << *s.intimidate << '\n';
+	os << *s.knowArcana << '\n';
+	os << *s.knowDungeoneering << '\n';
+	os << *s.knowEngineering << '\n';
+	os << *s.knowGeography << '\n';
+	os << *s.knowHistory << '\n';
+	os << *s.knowLocal << '\n';
+	os << *s.knowNature << '\n';
+	os << *s.knowNobility << '\n';
+	os << *s.knowPlanes << '\n';
+	os << *s.knowReligion << '\n';
+	os << *s.linguistics << '\n';
+	os << *s.perception << '\n';
+	os << *s.perform << '\n';
+	os << *s.profession << '\n';
+	os << *s.ride << '\n';
+	os << *s.senseMotive << '\n';
+	os << *s.sleightOfHand << '\n';
+	os << *s.spellcraft << '\n';
+	os << *s.stealth << '\n';
+	os << *s.survival << '\n';
+	os << *s.swim << '\n';
+	os << *s.useMagicDevice << '\n';
+	return os;
+}
+
+std::istream& operator>>(std::istream& is, Skills& s){
+	Skill acrobatics(s.ability->dexMod, false),
+		appraise(s.ability->intMod, false),
+		bluff(s.ability->chaMod, false),
+		climb(s.ability->strMod, false),
+		craft(s.ability->intMod, false),
+		diplomacy(s.ability->chaMod, false),
+		disableDevice(s.ability->dexMod, true),
+		disguise(s.ability->chaMod, false),
+		escapeArtist(s.ability->dexMod, false),
+		fly(s.ability->dexMod, false),
+		handleAnimal(s.ability->chaMod, true),
+		heal(s.ability->wisMod, false),
+		intimidate(s.ability->chaMod, false),
+		knowArcana(s.ability->intMod, true),
+		knowDungeoneering(s.ability->intMod, true),
+		knowEngineering(s.ability->intMod, true),
+		knowGeography(s.ability->intMod, true),
+		knowHistory(s.ability->intMod, true),
+		knowLocal(s.ability->intMod, true),
+		knowNature(s.ability->intMod, true),
+		knowNobility(s.ability->intMod, true),
+		knowPlanes(s.ability->intMod, true),
+		knowReligion(s.ability->intMod, true),
+		linguistics(s.ability->intMod, true),
+		perception(s.ability->wisMod, false),
+		perform(s.ability->chaMod, false),
+		profession(s.ability->wisMod, true),
+		ride(s.ability->dexMod, false),
+		senseMotive(s.ability->wisMod, false),
+		sleightOfHand(s.ability->dexMod, true),
+		spellcraft(s.ability->intMod, true),
+		stealth(s.ability->dexMod, false),
+		survival(s.ability->wisMod, false),
+		swim(s.ability->strMod, false),
+		useMagicDevice(s.ability->chaMod, true);
+	is >> acrobatics;
+	is >> appraise;
+	is >> bluff;
+	is >> climb;
+	is >> craft;
+	is >> diplomacy;
+	is >> disableDevice;
+	is >> disguise;
+	is >> escapeArtist;
+	is >> fly;
+	is >> handleAnimal;
+	is >> heal;
+	is >> intimidate;
+	is >> knowArcana;
+	is >> knowDungeoneering;
+	is >> knowEngineering;
+	is >> knowGeography;
+	is >> knowHistory;
+	is >> knowLocal;
+	is >> knowNature;
+	is >> knowNobility;
+	is >> knowPlanes;
+	is >> knowReligion;
+	is >> linguistics;
+	is >> perception;
+	is >> perform;
+	is >> profession;
+	is >> ride;
+	is >> senseMotive;
+	is >> sleightOfHand;
+	is >> spellcraft;
+	is >> stealth;
+	is >> survival;
+	is >> swim;
+	is >> useMagicDevice;
+	s.acrobatics = &acrobatics;
+	s.appraise = &appraise;
+	s.bluff = &bluff;
+	s.climb = &climb;
+	s.craft = &craft;
+	s.diplomacy = &diplomacy;
+	s.disableDevice = &disableDevice;
+	s.disguise = &disguise;
+	s.escapeArtist = &escapeArtist;
+	s.fly = &fly;
+	s.handleAnimal = &handleAnimal;
+	s.heal = &heal;
+	s.intimidate = &intimidate;
+	s.knowArcana = &knowArcana;
+	s.knowDungeoneering = &knowDungeoneering;
+	s.knowEngineering = &knowEngineering;
+	s.knowGeography = &knowGeography;
+	s.knowHistory = &knowHistory;
+	s.knowLocal = &knowLocal;
+	s.knowNature = &knowNature;
+	s.knowNobility = &knowNobility;
+	s.knowPlanes = &knowPlanes;
+	s.knowReligion = &knowReligion;
+	s.linguistics = &linguistics;
+	s.perception = &perception;
+	s.perform = &perform;
+	s.profession = &profession;
+	s.ride = &ride;
+	s.senseMotive = &senseMotive;
+	s.sleightOfHand = &sleightOfHand;
+	s.spellcraft = &spellcraft;
+	s.stealth = &stealth;
+	s.survival = &survival;
+	s.swim = &swim;
+	s.useMagicDevice = &useMagicDevice;
+	return is;
 }

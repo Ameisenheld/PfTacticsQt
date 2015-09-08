@@ -11,11 +11,14 @@
 class Skill{
 public:
 	Skill(short*, bool);
+	~Skill();
 	short miscMod;
 	bool classSkill;
 	short rank;
 	std::string additionalType;
 	short getValue();
+	friend std::ostream& operator<<(std::ostream& os, const Skill& s);
+	friend std::istream& operator>>(std::istream& is, Skill& s);
 private:
 	bool trainedOnly;
 	short* abbilityMod;

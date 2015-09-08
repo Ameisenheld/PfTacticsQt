@@ -33,7 +33,7 @@ public:
 	int hitDice;
 	Alignment alignment;
 	Skills* skills;
-	std::vector<Feat> feats;
+	std::vector<Feat*> feats;
 	std::vector<Weapon> weapons;
 	std::vector<Equipment> equipment;
 	Size size;

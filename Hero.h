@@ -18,6 +18,8 @@ public:
 	void updateStats();
 	void setRace(Race*);
 	int getHitDice();
+	friend std::ostream& operator<<(std::ostream& os, const Hero& h);
+	friend std::istream& operator>>(std::istream& is, Hero& h);
 private:
 	Race* race;
 	std::vector<Class*> characterClasses;	//a character may have any number of classLevels

@@ -10,6 +10,7 @@ public:
 	std::vector<std::vector<Spell>> SpellsKnown;	//A list for every SpellLevel
 	Spellbook SpellBook;
 	virtual bool isSpontaneous();
+private:
 };
 
 #endif
